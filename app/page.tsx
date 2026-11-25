@@ -3,6 +3,13 @@ import { ArrowDown, ArrowUpRight, Atom, Binary, Network, Microscope } from "luci
 import { SectionHeading } from "@/components/section-heading";
 import { FeatureCard } from "@/components/feature-card";
 
+export const metadata = {
+  title: "Beyond the Known. By Design.",
+  description:
+    "MidShaSum Research is an independent research and technology institution exploring quantitative research, financial technology and intelligent systems.",
+  alternates: { canonical: "/" }
+};
+
 export default function HomePage() {
   return <>
     <section className="relative flex min-h-[720px] items-center overflow-hidden border-b border-white/10 md:min-h-[790px]">
@@ -10,7 +17,7 @@ export default function HomePage() {
       <div className="hero-orb" aria-hidden="true"/>
       <div className="container-shell relative z-10 py-28">
         <div className="eyebrow mb-8">Independent Research & Technology</div>
-        <h1 className="font-display max-w-4xl text-5xl font-light leading-[1.08] tracking-[-.055em] text-white md:text-7xl lg:text-[88px]">Beyond the <span className="text-[#d8b84f]">known.</span><br/>By design.</h1>
+        <h1 className="font-display max-w-4xl text-[clamp(2.1rem,8vw,5.5rem)] font-light leading-[1.08] tracking-[-.055em] text-white md:text-7xl lg:text-[88px]"><span className="block">Beyond the <span className="text-[#d8b84f]">Known.</span></span><span className="block">By Design.</span></h1>
         <p className="mt-9 max-w-xl text-base leading-8 text-white/55 md:text-lg">We explore the frontiers of quantitative research, financial technology and intelligent systems through disciplined inquiry and purposeful engineering.</p>
         <div className="mt-11 flex flex-wrap items-center gap-7"><Link href="/research" className="btn-gold">Explore our research <ArrowUpRight size={15}/></Link><Link href="/about" className="btn-quiet">Discover MidShaSum <ArrowUpRight size={15}/></Link></div>
         <div className="mt-28 flex items-center gap-3 text-[10px] tracking-[.2em] text-white/30"><ArrowDown size={13}/> SCROLL TO EXPLORE</div>

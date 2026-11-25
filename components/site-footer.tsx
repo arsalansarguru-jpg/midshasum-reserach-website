@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 
 export function SiteFooter() {
@@ -6,7 +7,7 @@ export function SiteFooter() {
     <footer className="border-t border-white/10 bg-[#060708]">
       <div className="container-shell grid gap-12 py-16 md:grid-cols-[1.5fr_1fr_1fr]">
         <div>
-          <div className="font-display text-lg tracking-[.16em]">MIDSHASUM RESEARCH</div>
+          <Image src="/brand/logo-primary.webp" alt="MidShaSum Research" width={250} height={125} unoptimized className="h-auto w-48"/>
           <p className="mt-3 max-w-sm text-sm leading-7 text-white/45">Beyond the Known. By Design.</p>
           <p className="mt-6 max-w-sm text-xs leading-6 text-white/35">An independent research and technology institution exploring quantitative research, financial technology and intelligent systems.</p>
         </div>

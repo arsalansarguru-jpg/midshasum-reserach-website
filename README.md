@@ -7,9 +7,11 @@ A standalone Next.js App Router project for the MidShaSum Research institutional
 ## Stack
 - Next.js 15 / React 19 / TypeScript
 - Tailwind CSS 4
-- Framer Motion dependency included for future motion work
+- Next.js-optimised Sora and Inter fonts
+- CSS-only restrained motion with reduced-motion support
 - Lucide icons
 - Vercel-ready deployment configuration
+- Resend delivery adapter and Upstash Redis rate limiting for the enquiry API
 
 ## Requirements
 - Node.js 20.9 or newer
@@ -41,7 +43,7 @@ npm run start
    git push -u origin main
    ```
 4. In Vercel, import the GitHub repository.
-5. Keep the framework preset as Next.js. No environment variables are required for the current static site.
+5. Keep the framework preset as Next.js. Configure the variables documented in `ENVIRONMENT_SETUP.md` and `CONTACT_INTEGRATION_GUIDE.md` before enabling contact delivery.
 6. Deploy, then add `midshasumresearch.com` in Vercel project Settings → Domains.
 7. Apply the DNS records Vercel provides at your domain registrar.
 
@@ -53,7 +55,7 @@ npm run start
 ## Before public launch
 - Confirm the exact registered legal entity name, address and jurisdiction.
 - Have Privacy, Terms and Disclosures reviewed and completed by qualified counsel.
-- Connect a real contact form provider and approved institutional email address. The current API validates submissions and then explicitly reports that automatic delivery is not configured.
+- Configure the contact API with Resend credentials, verified sender/recipient addresses and Upstash Redis REST credentials; it fails closed if production services are missing.
 - Add verified institutional details, approved research publications and real project examples only.
 - Add an approved Ira Dev video/presentation asset only after the final presentation format is supplied.
 - Verify domain ownership, DNS, HTTPS, redirects and canonical domain in Vercel.

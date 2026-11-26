@@ -8,7 +8,7 @@ A standalone Next.js App Router project for the MidShaSum Research institutional
 - Next.js 15 / React 19 / TypeScript
 - Tailwind CSS 4
 - Next.js-optimised Sora and Inter fonts
-- Lazy React Three Fiber / Three.js scenes with a static CSS fallback and reduced-motion support
+- Three.js / React Three Fiber / Drei spatial scenes with a static CSS fallback and reduced-motion support
 - Lucide icons
 - Vercel-ready deployment configuration
 - Resend delivery adapter and Upstash Redis rate limiting for the enquiry API
@@ -53,10 +53,13 @@ npm run start
 - See `ASSET_INVENTORY.md` for the complete production inventory.
 
 ## Spatial experience
-- The homepage and page introductions use a lightweight orbital scene with pointer and scroll parallax.
-- Three.js is code-split and mounted only when a scene approaches the viewport; mobile uses a reduced particle count and lower rendering resolution.
-- The scene is decorative and never required to access content. A CSS architectural backdrop remains available when WebGL is unavailable, when loading fails, or when reduced motion is enabled.
+- The homepage features the MIDSHASUM SPATIAL CORE: a persistent, interactive WebGL scene spanning five scroll-driven research environments.
+- Pointer movement moves the perspective camera; scrolling changes the camera and transitions the scene through the institutional core, research dimensions, technology architecture, intelligence space and institutional outlook.
+- The scene uses instanced precision details, custom geometry, physically based metal materials, lit pathways, real depth and independently transformed components.
+- Three.js is dynamically loaded; inner-page scenes load near the viewport and stop rendering when out of view. Mobile uses lower pixel density and reduced environmental particles.
+- Scenes are decorative and never required to access content. CSS fallbacks remain available when WebGL is unavailable, loading fails or reduced motion is enabled.
 - The existing Content Security Policy is preserved; the spatial experience does not require opening additional script, image or connection origins.
+- `npm run qa:spatial` verifies WebGL rendering, camera response, scroll transitions and mobile rendering, and saves browser evidence under `reports/spatial-rebuild/`.
 
 ## Before public launch
 - Confirm the exact registered legal entity name, address and jurisdiction.

@@ -1,0 +1,70 @@
+{
+  "homepageStatus": 200,
+  "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+  "core": "MIDSHASUM SPATIAL CORE",
+  "initial": {
+    "width": 1600,
+    "height": 924,
+    "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+    "core": "MIDSHASUM SPATIAL CORE",
+    "environment": "core",
+    "triangles": 22748,
+    "drawCalls": 37,
+    "cameraX": -0.18,
+    "cameraY": 0,
+    "cameraZ": 8.15
+  },
+  "afterPointer": {
+    "pointerX": 0.88,
+    "cameraX": 0.19,
+    "cameraY": -0.062
+  },
+  "cameraResponded": true,
+  "environmentProof": [
+    {
+      "environment": "core",
+      "progress": 0,
+      "cameraX": 0.19,
+      "cameraZ": 8.15,
+      "triangles": 22748
+    },
+    {
+      "environment": "research",
+      "progress": 0.239,
+      "cameraX": 0.272,
+      "cameraZ": 8.454,
+      "triangles": 4096
+    },
+    {
+      "environment": "architecture",
+      "progress": 0.477,
+      "cameraX": 0.359,
+      "cameraZ": 8.626,
+      "triangles": 1792
+    },
+    {
+      "environment": "intelligence",
+      "progress": 0.737,
+      "cameraX": 0.45,
+      "cameraZ": 8.546,
+      "triangles": 7552
+    },
+    {
+      "environment": "outlook",
+      "progress": 0.973,
+      "cameraX": 0.544,
+      "cameraZ": 8.228,
+      "triangles": 9720
+    }
+  ],
+  "scrollChangedPerspective": true,
+  "mobile": {
+    "width": 351,
+    "height": 691,
+    "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+    "environment": "core",
+    "triangles": 20768
+  },
+  "researchTitle": "Investigating systems. Testing assumptions. Building understanding.",
+  "errors": []
+}

@@ -106,12 +106,12 @@ try {
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.goto(new URL("/", baseUrl).toString(), { waitUntil: "commit" });
   await page.waitForTimeout(400);
-  const reducedMotionCanvasCount = await page.locator("canvas").count();
-  const reducedMotionFallback = await page.locator(".spatial-fallback").count();
+  const reducedMotionCanvasCount = await page.locator(".spatial-universe canvas").count();
+  const reducedMotionFallback = await page.locator(".spatial-universe__fallback").count();
   await page.emulateMedia({ reducedMotion: "no-preference" });
   await page.goto(new URL("/", baseUrl).toString(), { waitUntil: "commit" });
-  await page.locator(".spatial-viewport canvas").waitFor({ state: "attached", timeout: 15_000 });
-  const spatialCanvasCount = await page.locator(".spatial-viewport canvas").count();
+  await page.locator(".spatial-universe canvas").waitFor({ state: "attached", timeout: 15_000 });
+  const spatialCanvasCount = await page.locator(".spatial-universe canvas").count();
   const contactFormFields = await page.goto(new URL("/contact", baseUrl).toString(), { waitUntil: "commit" })
     .then(() => page.locator("form input, form textarea, form select").count());
   const fallbackPage = await browser.newPage({ viewport: { width: 1280, height: 800 } });
@@ -126,8 +126,8 @@ try {
   });
   await fallbackPage.goto(new URL("/", baseUrl).toString(), { waitUntil: "commit" });
   await fallbackPage.waitForTimeout(1_000);
-  const fallbackCanvasCount = await fallbackPage.locator(".spatial-viewport canvas").count();
-  const fallbackBackdropCount = await fallbackPage.locator(".spatial-fallback").count();
+  const fallbackCanvasCount = await fallbackPage.locator(".spatial-universe canvas").count();
+  const fallbackBackdropCount = await fallbackPage.locator(".spatial-universe__fallback").count();
   await fallbackPage.close();
   const report = {
     results,
@@ -157,6 +157,7 @@ try {
     reducedMotionFallback === 0 ||
     spatialCanvasCount === 0 ||
     contactFormFields < 4 ||
+    fallbackCanvasCount !== 0 ||
     fallbackBackdropCount === 0 ||
     fallbackPageErrors.length > 0 ||
     pageErrors.length > 0

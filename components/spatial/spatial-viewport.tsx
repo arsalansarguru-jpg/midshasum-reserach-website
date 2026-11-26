@@ -10,7 +10,7 @@ const SpatialCanvas = dynamic(() => import("@/components/spatial/spatial-canvas"
   loading: () => null
 });
 
-class SpatialErrorBoundary extends Component<
+export class SpatialErrorBoundary extends Component<
   { children: React.ReactNode },
   { hasError: boolean }
 > {
@@ -57,19 +57,18 @@ export function SpatialViewport({
     if ("IntersectionObserver" in window) {
       observer = new IntersectionObserver(
         ([entry]) => {
-          if (entry.isIntersecting) {
-            setActive(true);
-            observer?.disconnect();
-            motionPreference.removeEventListener("change", updateMotionPreference);
-          }
+          setActive(entry.isIntersecting);
         },
         { rootMargin: "160px" }
       );
       observer.observe(element);
+    } else {
+      setActive(true);
     }
 
     return () => {
       observer?.disconnect();
+      motionPreference.removeEventListener("change", updateMotionPreference);
       window.removeEventListener("resize", updateQuality);
     };
   }, []);

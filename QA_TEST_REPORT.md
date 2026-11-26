@@ -41,4 +41,11 @@ The repeatable browser run saved 20 current screenshots in `reports/stage-2/`: d
 - Updated full-page desktop/mobile screenshots for the home and owner profile after scrolling to activate viewport reveals.
 - Profile screenshots: `reports/stage-2/ira-dev-desktop.jpg` and `reports/stage-2/ira-dev-mobile.jpg`.
 
-The motion is restrained Framer Motion reveal animation; the spatial treatment is CSS-based and does not require WebGL.
+## Spatial engineered rebuild
+
+- The homepage now uses the actual WebGL 2 scene MIDSHASUM SPATIAL CORE, rendered using Three.js, React Three Fiber and Drei.
+- Five scroll-selected environments were verified in production: institutional core, research dimensions, technology architecture, intelligence space and institutional outlook.
+- Browser proof showed 22,748 rendered triangles and 37 draw calls on the initial desktop frame. Moving the pointer moved the camera from x=-0.180 to x=0.190 and y=0 to y=-0.062; scrolling moved the camera and activated all five environment states.
+- Mobile WebGL rendering (20,768 triangles), zero console/page errors, normal and reduced-motion behavior, and CSS fallback with WebGL disabled were verified.
+- The production browser saved desktop, mobile and environment screenshots plus metrics to `reports/spatial-rebuild/`; see `SPATIAL_REBUILD_IMPLEMENTATION_REPORT.md`.
+- The existing Framer Motion owner-profile reveals remain separate and continue to honor reduced-motion preferences.

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return <>
-    <PageHero eyebrow="Legal information" title="Privacy policy" body="A draft outline of website information handling, subject to confirmation of the legal entity, jurisdiction and service providers."/>
+    <PageHero scene="legal" eyebrow="Legal information" title="Privacy policy" body="A draft outline of website information handling, subject to confirmation of the legal entity, jurisdiction and service providers."/>
     <section className="section-space">
       <div className="container-shell max-w-3xl">
         <LegalDraftNotice/>

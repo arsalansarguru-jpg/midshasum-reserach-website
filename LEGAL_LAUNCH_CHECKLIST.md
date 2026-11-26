@@ -36,7 +36,7 @@ Before publication, obtain qualified counsel's review and confirm:
 - [ ] Verify any authorization, registration or restrictions with qualified professionals; do not imply a status that has not been verified.
 - [ ] Review research, simulated performance, market-risk and investment-advice disclaimers.
 - [ ] Confirm any jurisdiction-specific financial-promotion or audience restrictions.
-- [ ] Retain explicit disclosure that Ira Dev is fictional, AI-generated and not an officer or employee.
+- [ ] Confirm Ira Dev's ownership and any formal leadership details against the responsible legal entity's records before publication.
 
 ## Publication gate
 

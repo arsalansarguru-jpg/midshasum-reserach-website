@@ -12,6 +12,6 @@
 
 ## Ira Dev source assets
 
-Twenty PNG portrait and pose assets were supplied in `Ira Dev AI Avatar/`. Eight high-quality selections were optimised as WebP files in `public/ira-dev/`. The original PNG files remain unchanged outside the web project.
+The approved `Elegant Executive Office Portrait.png` is used as the single primary portrait on the `/ira-dev` owner profile and is optimised as `public/ira-dev/ira-dev-executive.webp`. Other portrait and pose images are not used on that profile. The supplied source image remains unchanged.
 
-Ira Dev is a fictional, AI-generated virtual executive and brand spokesperson; she is not represented as a real employee, founder, director or statutory officer.
+The owner confirmed that Ira Dev is a real person and the owner of MidShaSum Research and supplied profile copy covering professional direction, institutional vision and areas of interest. Specific earlier career history and credentials remain subject to verification before publication.

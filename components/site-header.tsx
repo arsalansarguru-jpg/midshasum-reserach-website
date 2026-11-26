@@ -7,6 +7,7 @@ import { KeyboardEvent, useState } from "react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 
 const links = [
+  ["Home", "/"],
   ["About", "/about"],
   ["Research", "/research"],
   ["Technology", "/technology"],
@@ -34,7 +35,7 @@ export function SiteHeader() {
         </Link>
         <nav className="hidden items-center gap-8 lg:flex" aria-label="Main navigation">
           {links.map(([label, href]) => <Link key={href} href={href} aria-current={pathname === href ? "page" : undefined} className="nav-link text-[11px] tracking-[.08em] text-white/65 hover:text-[#e1c46b]">{label}</Link>)}
-          <Link href="/contact" aria-current={pathname === "/contact" ? "page" : undefined} className="btn-gold !px-4 !py-3">Enquire <ArrowUpRight size={14}/></Link>
+          <Link href="/contact" aria-current={pathname === "/contact" ? "page" : undefined} className="btn-gold !px-4 !py-3">Contact <ArrowUpRight size={14}/></Link>
         </nav>
         <button className="p-2 text-white lg:hidden" type="button" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} aria-controls="mobile-navigation" onClick={() => setOpen(!open)}>
           {open ? <X/> : <Menu/>}

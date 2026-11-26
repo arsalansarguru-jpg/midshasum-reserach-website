@@ -8,7 +8,7 @@ A standalone Next.js App Router project for the MidShaSum Research institutional
 - Next.js 15 / React 19 / TypeScript
 - Tailwind CSS 4
 - Next.js-optimised Sora and Inter fonts
-- CSS-only restrained motion with reduced-motion support
+- Lazy React Three Fiber / Three.js scenes with a static CSS fallback and reduced-motion support
 - Lucide icons
 - Vercel-ready deployment configuration
 - Resend delivery adapter and Upstash Redis rate limiting for the enquiry API
@@ -51,6 +51,12 @@ npm run start
 - Original logo and tagline source files are retained in the source asset directories.
 - Approved web copies and optimised Ira Dev images are organised under `public/brand/` and `public/ira-dev/`.
 - See `ASSET_INVENTORY.md` for the complete production inventory.
+
+## Spatial experience
+- The homepage and page introductions use a lightweight orbital scene with pointer and scroll parallax.
+- Three.js is code-split and mounted only when a scene approaches the viewport; mobile uses a reduced particle count and lower rendering resolution.
+- The scene is decorative and never required to access content. A CSS architectural backdrop remains available when WebGL is unavailable, when loading fails, or when reduced motion is enabled.
+- The existing Content Security Policy is preserved; the spatial experience does not require opening additional script, image or connection origins.
 
 ## Before public launch
 - Confirm the exact registered legal entity name, address and jurisdiction.

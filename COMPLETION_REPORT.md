@@ -9,7 +9,9 @@
 - Legal pages: Privacy, Terms and Disclosures
 - Contact API with server-side validation and spam honeypot
 - Sitemap and robots configuration
-- Optimised WebP Ira Dev selections and official logo assets
+- Optimised WebP Ira Dev portrait and official logo assets
+- Editorial Ira Dev owner profile with an approved ownership designation, institutional mandate, vision, focus areas and explicit biographical approval placeholders
+- Reduced-motion-aware reveal motion, in-page navigation and responsive single-portrait presentation
 
 ## Test Execution
 
@@ -19,6 +21,9 @@
 - `npm run build`: passed
 - Production route verification: all primary, legal, sitemap and robots routes returned HTTP 200
 - Contact API validation: invalid submissions returned HTTP 400
+- Ira Dev redesign: profile portrait and Open Graph image loaded; metadata and section navigation verified
+- Responsive browser QA: ten routes tested at six viewport widths with no horizontal overflow or broken images
+- Reduced-motion and JavaScript-disabled profile fallbacks checked
 
 ## Remaining Integrations
 
@@ -26,7 +31,7 @@
 - Configure contact delivery credentials through server environment variables
 - Complete legal entity details and obtain professional review
 - Add approved research publications and real institutional credentials only after verification
-- Integrate an approved Ira Dev video/presentation asset when supplied
+- Add an approved Ira Dev video/presentation asset only if one is supplied
 - Configure production analytics, if approved
 
 ## Deployment

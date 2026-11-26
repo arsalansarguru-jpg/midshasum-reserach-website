@@ -42,7 +42,7 @@ export default async function IntelligenceArticlePage({ params }: ArticlePagePro
     article.relatedArticleSlugs.includes(item.slug)
   );
   return <>
-    <PageHero eyebrow={article.category} title={article.title} body={article.excerpt}/>
+    <PageHero scene="intelligence" eyebrow={article.category} title={article.title} body={article.excerpt}/>
     <article className="section-space">
       <div className="container-shell max-w-3xl">
         <div className="mb-12 flex flex-wrap gap-x-6 gap-y-2 border-b border-white/10 pb-5 text-xs text-white/45">

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return <>
-    <PageHero eyebrow="Legal information" title="Terms of use" body="Draft terms addressing access to and use of the MidShaSum Research website."/>
+    <PageHero scene="legal" eyebrow="Legal information" title="Terms of use" body="Draft terms addressing access to and use of the MidShaSum Research website."/>
     <section className="section-space">
       <div className="container-shell max-w-3xl">
         <LegalDraftNotice/>

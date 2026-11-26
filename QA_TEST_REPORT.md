@@ -24,3 +24,21 @@ The repeatable browser run saved 20 current screenshots in `reports/stage-2/`: d
 - The production Upstash-backed rate limiter was not exercised against a live Redis service. The 429 behavior was verified using the development in-process limiter.
 - Provider rejection/exception behavior is implemented but was not tested against the external provider.
 - This is browser layout and functional QA, not a full screen-reader, cross-browser, or formal accessibility audit.
+
+## Ira Dev owner-profile repositioning
+
+- Presents Ira Dev as **Owner | MidShaSum Research**, following the owner's direct confirmation.
+- Replaced the previous persona framing on the profile and removed contradictory prior wording from the homepage, disclosures and current asset inventory.
+- Incorporated the supplied professional direction, interdisciplinary perspective, research interests and institutional vision, including its six long-term priorities.
+- Keeps only unsupplied career milestones, formal expertise/experience, and unconfirmed operational particulars as approval items. The first-person leadership statement is clearly marked as a proposed draft, not an actual quotation.
+- Rebuilt the `/ira-dev` profile with the approved `Elegant Executive Office Portrait.png` as its sole profile portrait; converted it to `public/ira-dev/ira-dev-executive.webp` (104,720 bytes).
+- Profile route build, lint and TypeScript checks passed.
+- All ten public/legal routes returned HTTP 200; no horizontal overflow at 1920, 1440, 1024, 768, 390 or 360 pixels.
+- The portrait loaded with descriptive alt text. No broken images or uncaught browser errors.
+- Page title, canonical URL, Open Graph image, five in-page navigation links and all five requested institutional links were verified; each required link target returned HTTP 200.
+- Rendered profile content no longer contains the old fictional/AI/virtual/spokesperson positioning.
+- Reduced-motion emulation displayed content without a reveal delay. With JavaScript disabled, profile content and the portrait remained visible.
+- Updated full-page desktop/mobile screenshots for the home and owner profile after scrolling to activate viewport reveals.
+- Profile screenshots: `reports/stage-2/ira-dev-desktop.jpg` and `reports/stage-2/ira-dev-mobile.jpg`.
+
+The motion is restrained Framer Motion reveal animation; the spatial treatment is CSS-based and does not require WebGL.

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 export default function AboutPage() {
   return <>
-    <PageHero eyebrow="About MidShaSum" title="An institution shaped by the pursuit of what comes next." body="MidShaSum Research is conceived as an independent research and technology institution combining quantitative inquiry, financial technology and systems engineering."/>
+    <PageHero scene="institution" eyebrow="About MidShaSum" title="An institution shaped by the pursuit of what comes next." body="MidShaSum Research is an independent research and technology institution combining quantitative inquiry, financial technology and systems engineering."/>
     <section className="section-space"><div className="container-shell grid gap-14 md:grid-cols-2"><SectionHeading eyebrow="Our philosophy" title="Progress begins where certainty ends."/><div className="text-sm leading-8 text-white/55"><p>We believe meaningful advancement requires more than adopting new tools or following prevailing assumptions. It requires asking better questions, testing ideas with discipline and building systems with care.</p><p className="mt-6">Our institutional approach is grounded in curiosity, methodological rigour, transparent communication and a commitment to continuous learning.</p></div></div></section>
     <section className="section-space border-y border-white/10 bg-[#0b0d10]"><div className="container-shell"><SectionHeading eyebrow="Guiding principles" title="The standards behind the exploration."/><div className="mt-12 grid gap-x-12 gap-y-10 md:grid-cols-2">{[
       ["01", "Intellectual curiosity", "Ask meaningful questions and remain open to evidence that challenges prior assumptions."],

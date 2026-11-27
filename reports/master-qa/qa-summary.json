@@ -1,0 +1,63 @@
+{
+  "webglMetrics": {
+    "environment": "core",
+    "triangles": 5026,
+    "drawCalls": 20,
+    "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+  },
+  "environmentsVisited": [
+    "core",
+    "research",
+    "architecture",
+    "intelligence",
+    "outlook"
+  ],
+  "sliderMoved": true,
+  "routeStatuses": {
+    "/about": 200,
+    "/research": 200,
+    "/technology": 200,
+    "/intelligence": 200,
+    "/ira-dev": 200,
+    "/contact": 200,
+    "/privacy": 200,
+    "/terms": 200,
+    "/disclosures": 200
+  },
+  "hasBrandSpokesperson": true,
+  "hasOwnerClaim": false,
+  "viewportChecks": {
+    "1920x1080": {
+      "scrollWidth": 1920,
+      "innerWidth": 1920,
+      "hasOverflow": false
+    },
+    "1440x900": {
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "hasOverflow": false
+    },
+    "1024x768": {
+      "scrollWidth": 1024,
+      "innerWidth": 1024,
+      "hasOverflow": false
+    },
+    "768x1024": {
+      "scrollWidth": 768,
+      "innerWidth": 768,
+      "hasOverflow": false
+    },
+    "390x844": {
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "hasOverflow": false
+    },
+    "360x800": {
+      "scrollWidth": 360,
+      "innerWidth": 360,
+      "hasOverflow": false
+    }
+  },
+  "fallbackVisible": true,
+  "errors": []
+}

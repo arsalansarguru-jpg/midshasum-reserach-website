@@ -1,61 +1,63 @@
 "use client";
 
-import { ArrowDown, ArrowUpRight } from "lucide-react";
-import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { SpatialExperienceCanvas, type SpatialEnvironment } from "@/components/spatial/spatial-canvas";
-import { SpatialErrorBoundary } from "@/components/spatial/spatial-viewport";
+import Link from "next/link";
+import { ArrowDown, ArrowUpRight, BookOpen, Mail, Handshake, Lightbulb } from "lucide-react";
+import { SpatialExperienceCanvas } from "@/components/spatial/spatial-canvas";
+import { SpatialErrorBoundary, SpatialViewport } from "@/components/spatial/spatial-viewport";
+import { ResearchFrontiers } from "@/components/spatial/research-frontiers";
+import { MethodologySpatial } from "@/components/spatial/methodology-spatial";
+import { SpatialNavRail } from "@/components/spatial/spatial-nav-rail";
+import { intelligenceArticles } from "@/lib/intelligence";
 
-const chapters: Array<{
-  environment: SpatialEnvironment;
-  index: string;
-  eyebrow: string;
-  title: string;
-  body: string;
-  primary?: { label: string; href: string };
-  secondary?: { label: string; href: string };
-}> = [
+const spatialChapters = [
   {
-    environment: "core",
+    id: "section-arrival",
+    environment: "core" as const,
     index: "01 / 05",
-    eyebrow: "Institutional core",
+    eyebrow: "Chapter 01 · Institutional Core",
     title: "MIDSHASUM RESEARCH",
-    body: "Exploring the frontiers of research, intelligence and technology through systematic inquiry, engineered thinking and purposeful innovation.",
-    primary: { label: "Explore our research", href: "/research" },
-    secondary: { label: "Discover MidShaSum", href: "/about" }
+    body: "An independent research and technology institution exploring quantitative inquiry, financial technology and intelligent systems through disciplined investigation.",
+    primary: { label: "Enter the institution", href: "#section-research-dimensions" },
+    secondary: { label: "Explore frontiers", href: "#section-frontiers" }
   },
   {
-    environment: "research",
+    id: "section-research-dimensions",
+    environment: "research" as const,
     index: "02 / 05",
-    eyebrow: "Research dimensions",
+    eyebrow: "Chapter 02 · Research Dimensions",
     title: "Complex questions live between disciplines.",
-    body: "A navigable constellation connects quantitative methods, market structure and independent inquiry. Each node marks a different perspective; the lines show questions that cross between them.",
-    primary: { label: "Research approach", href: "/research" }
+    body: "Quantitative methods, financial markets, statistical research and scientific investigation form an interconnected installation — where evidence is examined across boundaries rather than in isolation.",
+    primary: { label: "Research scope", href: "/research" },
+    secondary: { label: "Institutional philosophy", href: "/about" }
   },
   {
-    environment: "architecture",
+    id: "section-technology-architecture",
+    environment: "architecture" as const,
     index: "03 / 05",
-    eyebrow: "Technology architecture",
+    eyebrow: "Chapter 03 · Technology Architecture",
     title: "Engineered for clarity, built for inquiry.",
-    body: "A structural study in layers, alignment and repeatable systems—technology explored as an instrument for research, not an end in itself.",
+    body: "Layered engineering assemblies, deterministic pipelines and computational frameworks — technology developed as a precise instrument for reproducible research.",
     primary: { label: "Explore technology", href: "/technology" }
   },
   {
-    environment: "intelligence",
+    id: "section-intelligence-space",
+    environment: "intelligence" as const,
     index: "04 / 05",
-    eyebrow: "Intelligence space",
+    eyebrow: "Chapter 04 · Intelligence Space",
     title: "Find the signal in connected ideas.",
-    body: "Information, context and analytical thinking form a wider field of relationships. Understanding grows when evidence is examined in connection, with uncertainty kept in view.",
+    body: "Structured analytical strata and weighted signal pathways model how empirical data, context and uncertainty align across depth.",
     primary: { label: "Enter Intelligence", href: "/intelligence" }
   },
   {
-    environment: "outlook",
+    id: "section-institutional-outlook",
+    environment: "outlook" as const,
     index: "05 / 05",
-    eyebrow: "Institutional outlook",
+    eyebrow: "Chapter 05 · Institutional Outlook",
     title: "Beyond the Known. By Design.",
-    body: "Under the ownership of Ira Dev, MidShaSum Research is being developed around independent thought, disciplined exploration and a long view on the questions still taking shape.",
-    primary: { label: "Contact MidShaSum", href: "/contact" },
-    secondary: { label: "Meet Ira Dev, Owner", href: "/ira-dev" }
+    body: "MidShaSum Research is being developed around independent thought, disciplined exploration and a long view on the questions still taking shape.",
+    primary: { label: "Institutional enquiries", href: "/contact" },
+    secondary: { label: "Virtual spokesperson · Ira Dev", href: "/ira-dev" }
   }
 ];
 
@@ -71,8 +73,10 @@ export function SpatialUniverse() {
     const updateMotion = () => setReducedMotion(motionPreference.matches);
     const element = journey.current;
     let observer: IntersectionObserver | undefined;
+
     updateQuality();
     updateMotion();
+
     if (element && "IntersectionObserver" in window) {
       observer = new IntersectionObserver(
         ([entry]) => setSceneVisible(entry.isIntersecting),
@@ -82,6 +86,7 @@ export function SpatialUniverse() {
     } else {
       setSceneVisible(true);
     }
+
     window.addEventListener("resize", updateQuality, { passive: true });
     motionPreference.addEventListener("change", updateMotion);
     return () => {
@@ -92,83 +97,246 @@ export function SpatialUniverse() {
   }, []);
 
   return (
-    <section
-      ref={journey}
-      className="spatial-universe relative isolate"
-      aria-label="MidShaSum Research spatial journey"
-      data-testid="spatial-universe"
-    >
-      <div className="spatial-universe__sticky sticky top-[76px] z-0 -mb-[calc(100svh-76px)] h-[calc(100svh-76px)] min-h-[570px] overflow-hidden">
-        <div className="spatial-universe__fallback absolute inset-0" aria-hidden="true"/>
-        {sceneVisible && !reducedMotion && (
-          <SpatialErrorBoundary>
-            <SpatialExperienceCanvas
-              compact={compact}
-              progressRef={journey}
-              evidence
-            />
-          </SpatialErrorBoundary>
-        )}
-        <div className="spatial-universe__vignette absolute inset-0 pointer-events-none"/>
-        <div className="spatial-universe__coords absolute bottom-7 right-7 hidden text-right font-mono text-[9px] uppercase tracking-[.2em] text-white/40 md:block">
-          <div>M S R / SPATIAL CORE</div>
-          <div className="mt-2 text-[#d0ae62]/70">FIELD STUDY / 001</div>
-        </div>
-        <div className="spatial-universe__vertical-label absolute right-8 top-10 hidden font-mono text-[8px] uppercase tracking-[.24em] text-white/35 [writing-mode:vertical-rl] lg:block">
-          ARCHITECTURE OF INQUIRY · 2026
-        </div>
-      </div>
+    <div className="relative bg-[#080808] text-[#f7f7f5]">
+      <SpatialNavRail />
 
-      <div className="spatial-universe__chapters relative z-10">
-        {chapters.map((chapter, index) => {
-          const headingClass = `font-display mt-6 font-light leading-[1.06] tracking-[-.06em] text-white ${index === 0 ? "max-w-[660px] text-[clamp(2.8rem,7.4vw,6.6rem)]" : "max-w-[570px] text-4xl sm:text-5xl lg:text-6xl"}`;
-          const heading = index === 0
-            ? <>Beyond the <span className="text-[#d6b866]">Known.</span><br/>By Design.</>
-            : chapter.title;
-          return (
-            <article
-              key={chapter.environment}
-              className={`spatial-chapter container-shell flex min-h-[100svh] items-center ${index === 0 ? "spatial-chapter--opening" : ""} ${index === chapters.length - 1 ? "spatial-chapter--outlook" : ""}`}
-              data-spatial-chapter={chapter.environment}
-            >
-              <div className={`spatial-chapter__content max-w-[min(100%,650px)] ${index === 0 ? "pt-5 md:pt-0" : "py-24 md:py-28"}`}>
-                <p className="eyebrow">{chapter.eyebrow}</p>
-                <p className="mt-5 font-mono text-[9px] tracking-[.27em] text-white/35">{chapter.index} <span className="px-2 text-[#d0ae62]/70">/</span> MIDSHASUM RESEARCH</p>
-                {index === 0 && <p className="font-display mt-9 text-[10px] font-medium tracking-[.34em] text-white/60 sm:text-xs">MIDSHASUM RESEARCH</p>}
-                {index === 0
-                  ? <h1 className={headingClass}>{heading}</h1>
-                  : <h2 className={headingClass}>{heading}</h2>}
-                <p className="mt-7 max-w-[510px] text-sm leading-7 text-white/65 sm:text-base sm:leading-8">
-                  {chapter.body}
-                </p>
-                {(chapter.primary || chapter.secondary) && (
-                  <div className="mt-8 flex flex-wrap items-center gap-x-7 gap-y-3">
-                    {chapter.primary && (
-                      <Link href={chapter.primary.href} className="btn-gold">
-                        {chapter.primary.label}<ArrowUpRight aria-hidden="true" size={15}/>
-                      </Link>
-                    )}
-                    {chapter.secondary && (
-                      <Link href={chapter.secondary.href} className="btn-quiet">
-                        {chapter.secondary.label}<ArrowUpRight aria-hidden="true" size={15}/>
-                      </Link>
-                    )}
-                  </div>
-                )}
-                {index === 0 && (
-                  <a href="#spatial-chapter-research" className="mt-14 inline-flex items-center gap-3 font-mono text-[9px] tracking-[.23em] text-white/40 transition-colors hover:text-[#d6b866]">
-                    <ArrowDown aria-hidden="true" size={13}/> SCROLL TO EXPLORE
-                  </a>
-                )}
+      {/* ─── 5-CHAPTER CONTINUOUS SPATIAL JOURNEY ─── */}
+      <section
+        ref={journey}
+        id="section-arrival"
+        className="spatial-universe relative isolate"
+        aria-label="MidShaSum Research five-chapter spatial journey"
+        data-testid="spatial-universe"
+      >
+        <div className="spatial-universe__sticky sticky top-[76px] z-0 -mb-[calc(100svh-76px)] h-[calc(100svh-76px)] min-h-[570px] overflow-hidden">
+          <div className="spatial-universe__fallback absolute inset-0" aria-hidden="true" />
+          {sceneVisible && !reducedMotion && (
+            <SpatialErrorBoundary>
+              <SpatialExperienceCanvas
+                compact={compact}
+                progressRef={journey}
+                evidence
+              />
+            </SpatialErrorBoundary>
+          )}
+          <div className="spatial-universe__vignette absolute inset-0 pointer-events-none" />
+          <div className="spatial-universe__coords absolute bottom-7 right-7 hidden text-right font-mono text-[9px] uppercase tracking-[.2em] text-white/40 md:block">
+            <div>M S R / SPATIAL CORE</div>
+            <div className="mt-2 text-[#c9a227]/75">FIELD STUDY / 001</div>
+          </div>
+          <div className="spatial-universe__vertical-label absolute right-8 top-10 hidden font-mono text-[8px] uppercase tracking-[.24em] text-white/35 [writing-mode:vertical-rl] lg:block">
+            ARCHITECTURE OF INQUIRY · 2026
+          </div>
+        </div>
+
+        <div className="spatial-universe__chapters relative z-10">
+          {spatialChapters.map((chapter, index) => {
+            const isOpening = index === 0;
+            const isOutlook = index === spatialChapters.length - 1;
+            const headingClass = `font-display mt-5 font-light leading-[1.08] tracking-[-.05em] text-[#f7f7f5] ${
+              isOpening
+                ? "max-w-[650px] text-[clamp(2.6rem,6.6vw,5.8rem)]"
+                : "max-w-[560px] text-3xl sm:text-5xl lg:text-[3.25rem]"
+            }`;
+            const heading = isOpening ? (
+              <>
+                Beyond the <span className="text-[#e1c46b]">Known.</span>
+                <br />
+                By Design.
+              </>
+            ) : (
+              chapter.title
+            );
+
+            return (
+              <article
+                key={chapter.environment}
+                id={index === 0 ? undefined : chapter.id}
+                className={`spatial-chapter container-shell flex min-h-[100svh] items-center ${
+                  isOpening ? "spatial-chapter--opening" : ""
+                } ${isOutlook ? "spatial-chapter--outlook" : ""}`}
+                data-spatial-chapter={chapter.environment}
+              >
+                <div
+                  className={`spatial-chapter__content max-w-[min(100%,610px)] ${
+                    isOpening ? "pt-5 md:pt-0" : "py-24 md:py-28"
+                  }`}
+                >
+                  <p className="eyebrow">{chapter.eyebrow}</p>
+                  <p className="mt-4 font-mono text-[9px] tracking-[.25em] text-white/35">
+                    {chapter.index} <span className="px-2 text-[#c9a227]/70">/</span> MIDSHASUM RESEARCH
+                  </p>
+                  {isOpening && (
+                    <p className="font-display mt-7 text-[11px] font-medium tracking-[.32em] text-white/70 sm:text-xs">
+                      MIDSHASUM RESEARCH
+                    </p>
+                  )}
+                  {isOpening ? (
+                    <h1 className={headingClass}>{heading}</h1>
+                  ) : (
+                    <h2 className={headingClass}>{heading}</h2>
+                  )}
+                  <p className="mt-6 max-w-[500px] text-sm leading-7 text-white/65 sm:text-base sm:leading-8">
+                    {chapter.body}
+                  </p>
+                  {(chapter.primary || chapter.secondary) && (
+                    <div className="mt-8 flex flex-wrap items-center gap-x-7 gap-y-3">
+                      {chapter.primary && (
+                        chapter.primary.href.startsWith("#") ? (
+                          <a href={chapter.primary.href} className="btn-gold">
+                            {chapter.primary.label} <ArrowDown aria-hidden="true" size={15} />
+                          </a>
+                        ) : (
+                          <Link href={chapter.primary.href} className="btn-gold">
+                            {chapter.primary.label} <ArrowUpRight aria-hidden="true" size={15} />
+                          </Link>
+                        )
+                      )}
+                      {chapter.secondary && (
+                        chapter.secondary.href.startsWith("#") ? (
+                          <a href={chapter.secondary.href} className="btn-quiet">
+                            {chapter.secondary.label} <ArrowUpRight aria-hidden="true" size={15} />
+                          </a>
+                        ) : (
+                          <Link href={chapter.secondary.href} className="btn-quiet">
+                            {chapter.secondary.label} <ArrowUpRight aria-hidden="true" size={15} />
+                          </Link>
+                        )
+                      )}
+                    </div>
+                  )}
+                  {isOpening && (
+                    <a
+                      href="#section-research-dimensions"
+                      className="mt-12 inline-flex items-center gap-3 font-mono text-[9px] tracking-[.23em] text-white/40 transition-colors hover:text-[#e1c46b]"
+                    >
+                      <ArrowDown aria-hidden="true" size={13} /> SCROLL TO EXPLORE
+                    </a>
+                  )}
+                </div>
+              </article>
+            );
+          })}
+        </div>
+        <div aria-hidden="true" className="spatial-universe__endcap h-[18svh]" />
+      </section>
+
+      {/* ─── RESEARCH FRONTIERS (OBSIDIANUI PARALLAX SLIDER) ─── */}
+      <ResearchFrontiers />
+
+      {/* ─── RESEARCH METHODOLOGY (SPATIAL PROCESS VISUALISATION) ─── */}
+      <MethodologySpatial />
+
+      {/* ─── INSIGHTS AND PUBLICATIONS ─── */}
+      <section
+        id="section-insights"
+        data-spatial-section="insights"
+        className="border-b border-white/10 bg-[#101216]/60 py-24 md:py-32"
+      >
+        <div className="container-shell grid gap-14 lg:grid-cols-[.8fr_1.2fr]">
+          <div>
+            <p className="eyebrow">Insights &amp; Publications</p>
+            <h2 className="font-display mt-5 text-3xl font-light leading-tight tracking-[-.045em] text-[#f7f7f5] sm:text-5xl">
+              A considered record, not a content feed.
+            </h2>
+            <p className="mt-5 max-w-md text-sm leading-7 text-white/55">
+              The MidShaSum Research Intelligence library is structured for research articles, institutional perspectives, technical insights and emerging technology analysis.
+            </p>
+            <Link href="/intelligence" className="btn-quiet mt-8">
+              Open Intelligence library <ArrowUpRight size={14} aria-hidden="true" />
+            </Link>
+          </div>
+
+          <div className="border-y border-white/10 py-10">
+            {intelligenceArticles.length > 0 ? (
+              <div className="grid gap-5 sm:grid-cols-2">
+                {intelligenceArticles.map((article) => (
+                  <Link
+                    key={article.slug}
+                    href={`/intelligence/${article.slug}`}
+                    className="group border border-white/10 bg-[#080808]/80 p-6 transition-colors hover:border-[#c9a227]/45"
+                  >
+                    <span className="eyebrow">{article.category}</span>
+                    <h3 className="font-display mt-3 text-xl font-light text-white group-hover:text-[#e1c46b]">
+                      {article.title}
+                    </h3>
+                    <p className="mt-3 text-xs leading-6 text-white/55">{article.excerpt}</p>
+                  </Link>
+                ))}
               </div>
-              <span id={index === 1 ? "spatial-chapter-research" : undefined} className="sr-only">
-                Spatial environment: {chapter.environment}
-              </span>
-            </article>
-          );
-        })}
-      </div>
-      <div aria-hidden="true" className="spatial-universe__endcap h-[30svh]"/>
-    </section>
+            ) : (
+              <div className="flex items-start gap-5">
+                <BookOpen className="mt-1 shrink-0 text-[#c9a227]" size={24} aria-hidden="true" />
+                <div>
+                  <div className="eyebrow">Editorial Programme</div>
+                  <h3 className="font-display mt-4 text-2xl font-light text-white">
+                    No publications yet.
+                  </h3>
+                  <p className="mt-4 max-w-xl text-sm leading-8 text-white/55">
+                    Research notes, technical insights and institutional perspectives will be published here only after factual and editorial review. No unverified findings or fabricated publications are presented.
+                  </p>
+                  <div className="mt-7 flex flex-wrap gap-3 font-mono text-[10px] uppercase tracking-[.2em] text-[#e1c46b]">
+                    <span>Research Articles</span>
+                    <span className="text-white/25">·</span>
+                    <span>Institutional Perspectives</span>
+                    <span className="text-white/25">·</span>
+                    <span>Technical Insights</span>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── CONTACT AND INSTITUTIONAL ENQUIRIES ─── */}
+      <section
+        id="section-contact"
+        data-spatial-section="contact"
+        className="spatial-hero relative isolate overflow-hidden bg-[#080808] py-24 md:py-32"
+      >
+        <SpatialViewport variant="contact" />
+        <div className="container-shell relative z-10">
+          <div className="max-w-3xl">
+            <p className="eyebrow">Institutional Enquiries</p>
+            <h2 className="font-display mt-6 text-4xl font-light leading-[1.1] tracking-[-.05em] text-white sm:text-6xl">
+              Beyond the Known.
+              <br />
+              <span className="text-[#e1c46b]">By Design.</span>
+            </h2>
+            <p className="mt-6 max-w-xl text-sm leading-8 text-white/60 sm:text-base">
+              MidShaSum Research welcomes considered enquiries relating to research collaboration, technology partnerships, licensing and institutional relationships.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-0 border-y border-white/10 bg-[#080808]/75 backdrop-blur-sm md:grid-cols-3">
+            <div className="border-b border-white/10 py-7 md:border-b-0 md:pr-7">
+              <Mail className="text-[#c9a227]" size={20} aria-hidden="true" />
+              <h3 className="font-display mt-5 text-lg text-white">Institutional enquiries</h3>
+              <p className="mt-2 text-sm leading-7 text-white/50">General enquiries and institutional introductions.</p>
+            </div>
+            <div className="border-b border-white/10 py-7 md:border-b-0 md:border-l md:border-white/10 md:px-7">
+              <Handshake className="text-[#c9a227]" size={20} aria-hidden="true" />
+              <h3 className="font-display mt-5 text-lg text-white">Partnerships</h3>
+              <p className="mt-2 text-sm leading-7 text-white/50">Technology, research and strategic collaborations.</p>
+            </div>
+            <div className="py-7 md:border-l md:border-white/10 md:pl-7">
+              <Lightbulb className="text-[#c9a227]" size={20} aria-hidden="true" />
+              <h3 className="font-display mt-5 text-lg text-white">Licensing &amp; projects</h3>
+              <p className="mt-2 text-sm leading-7 text-white/50">Discuss potential technology licensing and project scope.</p>
+            </div>
+          </div>
+
+          <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
+            <Link href="/contact" className="btn-gold">
+              Open enquiry form <ArrowUpRight size={15} aria-hidden="true" />
+            </Link>
+            <Link href="/ira-dev" className="btn-quiet">
+              Virtual spokesperson · Ira Dev <ArrowUpRight size={15} aria-hidden="true" />
+            </Link>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }

@@ -779,6 +779,7 @@ function SpatialComposition({
       c.dataset.cameraX = camera.position.x.toFixed(3);
       c.dataset.cameraY = camera.position.y.toFixed(3);
       c.dataset.cameraZ = camera.position.z.toFixed(3);
+      c.dataset.pointerX = state.pointer.x.toFixed(3);
       c.dataset.drawCalls = String(gl.info.render.calls);
       c.dataset.triangles = String(gl.info.render.triangles);
     }
@@ -886,6 +887,8 @@ export function SpatialExperienceCanvas({
       frameloop="always"
       shadows
       performance={{ min: 0.5 }}
+      eventSource={typeof document !== "undefined" ? document.documentElement : undefined}
+      eventPrefix="client"
       onCreated={({ gl }) => {
         gl.toneMapping = THREE.ACESFilmicToneMapping;
         gl.toneMappingExposure = 1.08;

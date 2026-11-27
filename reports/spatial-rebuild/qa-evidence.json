@@ -8,62 +8,62 @@
     "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
     "core": "MIDSHASUM SPATIAL CORE",
     "environment": "core",
-    "triangles": 22748,
-    "drawCalls": 37,
-    "cameraX": -0.18,
+    "triangles": 5026,
+    "drawCalls": 20,
+    "cameraX": 0.1,
     "cameraY": 0,
-    "cameraZ": 8.15
+    "cameraZ": 9.4
   },
   "afterPointer": {
     "pointerX": 0.88,
-    "cameraX": 0.19,
-    "cameraY": -0.062
+    "cameraX": 0.294,
+    "cameraY": -0.01
   },
   "cameraResponded": true,
   "environmentProof": [
     {
       "environment": "core",
       "progress": 0,
-      "cameraX": 0.19,
-      "cameraZ": 8.15,
-      "triangles": 22748
+      "cameraX": 0.294,
+      "cameraZ": 9.4,
+      "triangles": 5026
     },
     {
       "environment": "research",
-      "progress": 0.239,
-      "cameraX": 0.272,
-      "cameraZ": 8.454,
-      "triangles": 4096
+      "progress": 0.249,
+      "cameraX": 0.693,
+      "cameraZ": 10.338,
+      "triangles": 13546
     },
     {
       "environment": "architecture",
-      "progress": 0.477,
-      "cameraX": 0.359,
-      "cameraZ": 8.626,
-      "triangles": 1792
+      "progress": 0.495,
+      "cameraX": -0.476,
+      "cameraZ": 11.081,
+      "triangles": 2048
     },
     {
       "environment": "intelligence",
-      "progress": 0.737,
-      "cameraX": 0.45,
-      "cameraZ": 8.546,
-      "triangles": 7552
+      "progress": 0.75,
+      "cameraX": 0.391,
+      "cameraZ": 9.346,
+      "triangles": 5382
     },
     {
       "environment": "outlook",
-      "progress": 0.973,
-      "cameraX": 0.544,
-      "cameraZ": 8.228,
-      "triangles": 9720
+      "progress": 0.98,
+      "cameraX": -0.656,
+      "cameraZ": 9.813,
+      "triangles": 5026
     }
   ],
   "scrollChangedPerspective": true,
   "mobile": {
-    "width": 351,
-    "height": 691,
+    "width": 370,
+    "height": 729,
     "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
     "environment": "core",
-    "triangles": 20768
+    "triangles": 4666
   },
   "researchTitle": "Investigating systems. Testing assumptions. Building understanding.",
   "errors": []

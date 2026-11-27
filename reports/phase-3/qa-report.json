@@ -1,0 +1,28 @@
+{
+  "environments": [
+    "core",
+    "research",
+    "architecture",
+    "intelligence",
+    "outlook"
+  ],
+  "contextLossHandled": true,
+  "keyboardNavMoved": true,
+  "hasMethodologySequence": true,
+  "mobileChecks": {
+    "390x844": {
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "hasOverflow": false
+    },
+    "360x800": {
+      "scrollWidth": 360,
+      "innerWidth": 360,
+      "hasOverflow": false
+    }
+  },
+  "webglUnavailableFallbackVisible": true,
+  "reducedMotionFallbackVisible": true,
+  "pageAliveAfterImageAbort": true,
+  "errors": []
+}

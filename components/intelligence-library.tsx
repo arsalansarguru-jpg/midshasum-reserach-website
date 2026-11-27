@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { BookOpen, ArrowUpRight } from "lucide-react";
+import { BookOpen, ArrowUpRight, Search } from "lucide-react";
 import type { IntelligenceArticle, IntelligenceCategory } from "@/lib/intelligence";
 
 const CATEGORIES: Array<"All" | IntelligenceCategory> = [
@@ -16,40 +16,67 @@ const CATEGORIES: Array<"All" | IntelligenceCategory> = [
 
 export function IntelligenceLibrary({ articles }: { articles: IntelligenceArticle[] }) {
   const [activeCategory, setActiveCategory] = useState<"All" | IntelligenceCategory>("All");
+  const [query, setQuery] = useState("");
 
-  const filtered =
-    activeCategory === "All"
-      ? articles
-      : articles.filter((a) => a.category === activeCategory);
+  const normalizedQuery = query.trim().toLowerCase();
+  const filtered = articles.filter((a) => {
+    const matchesCategory = activeCategory === "All" || a.category === activeCategory;
+    if (!matchesCategory) return false;
+    if (!normalizedQuery) return true;
+    return (
+      a.title.toLowerCase().includes(normalizedQuery) ||
+      a.excerpt.toLowerCase().includes(normalizedQuery) ||
+      a.category.toLowerCase().includes(normalizedQuery) ||
+      a.author.toLowerCase().includes(normalizedQuery)
+    );
+  });
 
   return (
-    <div className="space-y-10">
-      {/* Category Filter Bar */}
-      <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 pb-5">
-        <div className="flex flex-wrap gap-2" role="tablist" aria-label="Filter publications by category">
-          {CATEGORIES.map((category) => {
-            const active = activeCategory === category;
-            return (
-              <button
-                key={category}
-                type="button"
-                role="tab"
-                aria-selected={active}
-                onClick={() => setActiveCategory(category)}
-                className={`border px-3.5 py-2 font-mono text-[10px] uppercase tracking-[.16em] transition-colors ${
-                  active
-                    ? "border-[#c9a227] bg-[#c9a227]/15 text-[#e1c46b]"
-                    : "border-white/10 bg-[#0d1015] text-white/55 hover:border-white/25 hover:text-white"
-                }`}
-              >
-                {category}
-              </button>
-            );
-          })}
+    <div className="space-y-8">
+      {/* Search + Category Filter Bar */}
+      <div className="space-y-5 border-b border-white/10 pb-6">
+        <div className="relative">
+          <Search
+            className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-white/35"
+            size={15}
+            aria-hidden="true"
+          />
+          <input
+            type="search"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Search publications by title, topic or category..."
+            aria-label="Search publications"
+            className="w-full border border-white/10 bg-[#0d1015] py-3 pl-11 pr-4 text-sm text-white placeholder:text-white/35 outline-none transition-colors focus:border-[#c9a227]"
+          />
         </div>
-        <span className="font-mono text-[10px] uppercase tracking-[.2em] text-white/40">
-          {filtered.length} {filtered.length === 1 ? "Entry" : "Entries"}
-        </span>
+
+        <div className="flex flex-wrap items-center justify-between gap-4">
+          <div className="flex flex-wrap gap-2" role="tablist" aria-label="Filter publications by category">
+            {CATEGORIES.map((category) => {
+              const active = activeCategory === category;
+              return (
+                <button
+                  key={category}
+                  type="button"
+                  role="tab"
+                  aria-selected={active}
+                  onClick={() => setActiveCategory(category)}
+                  className={`border px-3.5 py-2 font-mono text-[10px] uppercase tracking-[.16em] transition-colors ${
+                    active
+                      ? "border-[#c9a227] bg-[#c9a227]/15 text-[#e1c46b]"
+                      : "border-white/10 bg-[#0d1015] text-white/55 hover:border-white/25 hover:text-white"
+                  }`}
+                >
+                  {category}
+                </button>
+              );
+            })}
+          </div>
+          <span className="font-mono text-[10px] uppercase tracking-[.2em] text-white/40">
+            {filtered.length} {filtered.length === 1 ? "Entry" : "Entries"}
+          </span>
+        </div>
       </div>
 
       {/* Article Grid or Honest Empty State */}
@@ -95,10 +122,12 @@ export function IntelligenceLibrary({ articles }: { articles: IntelligenceArticl
             <div>
               <div className="eyebrow">Editorial programme</div>
               <h2 className="font-display mt-4 text-2xl font-light text-white">
-                No publications yet.
+                {articles.length === 0 ? "No publications yet." : "No matching publications."}
               </h2>
               <p className="mt-4 max-w-xl text-sm leading-8 text-white/50">
-                New material will appear here after editorial and factual review. No articles or market opinions are attributed to individuals at this time.
+                {articles.length === 0
+                  ? "New material will appear here after editorial and factual review. No articles or market opinions are attributed to individuals at this time."
+                  : "Try clearing the search filter or selecting a different category."}
               </p>
               <div className="mt-7 inline-flex items-center gap-2 text-xs tracking-widest text-[#d8b84f]">
                 EVIDENCE · CONTEXT · PERSPECTIVE <ArrowUpRight size={14} aria-hidden="true" />

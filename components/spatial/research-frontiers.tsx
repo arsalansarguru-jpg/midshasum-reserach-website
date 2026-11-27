@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Link from "next/link";
-import { ArrowUpRight, Compass, X } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight, Compass, X } from "lucide-react";
 import { ParallaxSlider, type ParallaxSlide } from "@/components/block/parallax-slider";
 
 export interface ResearchFrontierDomain {
@@ -100,8 +100,15 @@ export const RESEARCH_FRONTIER_DOMAINS: ResearchFrontierDomain[] = [
 ];
 
 export function ResearchFrontiers() {
+  const sliderHostRef = useRef<HTMLDivElement>(null);
   const [selected, setSelected] = useState<ResearchFrontierDomain>(RESEARCH_FRONTIER_DOMAINS[0]);
   const [drawerOpen, setDrawerOpen] = useState(false);
+
+  function stepSlider(direction: "ArrowLeft" | "ArrowRight") {
+    const viewport = sliderHostRef.current?.querySelector<HTMLElement>(".obsidian-parallax-slider__viewport");
+    if (!viewport) return;
+    viewport.dispatchEvent(new KeyboardEvent("keydown", { key: direction, bubbles: true }));
+  }
 
   const slides: ParallaxSlide[] = RESEARCH_FRONTIER_DOMAINS.map((domain) => ({
     title: `${domain.code} — ${domain.title}`,
@@ -121,16 +128,37 @@ export function ResearchFrontiers() {
         <div className="flex items-center gap-3">
           <Compass className="text-[#c9a227]" size={15} aria-hidden="true" />
           <span className="font-mono text-[10px] uppercase tracking-[.26em] text-[#e1c46b]">
-            03 / Research Frontiers · Proposed Exploration Domains
+            Research Frontiers · Proposed Exploration Domains
           </span>
         </div>
-        <p className="font-mono text-[10px] uppercase tracking-[.2em] text-white/45">
-          Drag · Scroll · Arrow Keys to Explore
-        </p>
+        <div className="flex items-center gap-3">
+          <p className="hidden font-mono text-[10px] uppercase tracking-[.2em] text-white/45 sm:block">
+            Drag · Arrow Keys to Explore
+          </p>
+          <div className="flex items-center gap-1.5">
+            <button
+              type="button"
+              onClick={() => stepSlider("ArrowLeft")}
+              aria-label="Previous research frontier"
+              className="border border-white/15 bg-[#101216] p-2 text-white/70 transition-colors hover:border-[#c9a227] hover:text-[#e1c46b]"
+            >
+              <ArrowLeft size={14} aria-hidden="true" />
+            </button>
+            <button
+              type="button"
+              onClick={() => stepSlider("ArrowRight")}
+              aria-label="Next research frontier"
+              className="border border-white/15 bg-[#101216] p-2 text-white/70 transition-colors hover:border-[#c9a227] hover:text-[#e1c46b]"
+            >
+              <ArrowRight size={14} aria-hidden="true" />
+            </button>
+          </div>
+        </div>
       </div>
 
       {/* ObsidianUI Parallax Slider */}
       <div
+        ref={sliderHostRef}
         className="relative"
         style={
           {

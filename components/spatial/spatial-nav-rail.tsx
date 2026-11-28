@@ -45,7 +45,7 @@ export function SpatialNavRail() {
       aria-label="Spatial section navigation"
       className="fixed right-4 top-1/2 z-40 hidden -translate-y-1/2 flex-col items-end gap-1.5 2xl:flex"
     >
-      <div className="border border-white/10 bg-[#080808]/85 px-2.5 py-3 backdrop-blur-md">
+      <div className="glass-panel px-2.5 py-3">
         <ul className="space-y-1.5">
           {SECTIONS.map((sec) => {
             const isActive = activeId === sec.id;

@@ -58,7 +58,7 @@ export default async function IntelligenceArticlePage({ params }: ArticlePagePro
         </div>
         <p className="mt-14 border-l border-[#c9a227] pl-5 text-sm leading-7 text-white/45">This material is for general research communication and is not investment advice.</p>
         <Link href="/intelligence" className="btn-quiet mt-10">Back to Intelligence</Link>
-        {related.length > 0 && <aside className="mt-16 border-t border-white/10 pt-10"><h2 className="font-display text-2xl font-light">Related articles</h2><ul className="mt-6 grid gap-4 sm:grid-cols-2">{related.map((item) => <li key={item.slug}><Link className="block border border-white/10 p-5 transition hover:border-[#c9a227]/40" href={`/intelligence/${item.slug}`}><span className="eyebrow">{item.category}</span><span className="mt-3 block font-display text-lg">{item.title}</span></Link></li>)}</ul></aside>}
+        {related.length > 0 && <aside className="mt-16 border-t border-white/10 pt-10"><h2 className="font-display text-2xl font-light">Related articles</h2><ul className="mt-6 grid gap-4 sm:grid-cols-2">{related.map((item) => <li key={item.slug}><Link className="glass-card-interactive block p-5" href={`/intelligence/${item.slug}`}><span className="eyebrow">{item.category}</span><span className="mt-3 block font-display text-lg">{item.title}</span></Link></li>)}</ul></aside>}
       </div>
     </article>
   </>;

@@ -167,7 +167,7 @@ export function MethodologySpatial() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.28 }}
-              className="border border-[#c9a227]/30 bg-[#101216]/90 p-7 sm:p-9"
+              className="glass-card-gold p-7 sm:p-9"
             >
               <div className="flex items-center justify-between border-b border-white/10 pb-4">
                 <span className="font-mono text-[10px] uppercase tracking-[.24em] text-[#e1c46b]">
@@ -196,10 +196,10 @@ export function MethodologySpatial() {
                     key={stage.step}
                     type="button"
                     onClick={() => setActiveIndex(index)}
-                    className={`border px-3.5 py-3 text-left transition-colors ${
+                    className={`px-3.5 py-3 text-left ${
                       isActive
-                        ? "border-[#c9a227]/70 bg-[#c9a227]/10 text-white"
-                        : "border-white/10 bg-[#101216]/50 text-white/55 hover:border-white/25 hover:text-white"
+                        ? "glass-card-gold text-white"
+                        : "glass-card-interactive text-white/60 hover:text-white"
                     }`}
                   >
                     <span className="block font-mono text-[9px] tracking-[.2em] text-[#c9a227]">

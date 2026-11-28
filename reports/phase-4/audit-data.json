@@ -1,0 +1,136 @@
+{
+  "envMetrics": [
+    {
+      "env": "core",
+      "triangles": 5026,
+      "drawCalls": 20,
+      "cameraZ": 9.4
+    },
+    {
+      "env": "research",
+      "triangles": 13546,
+      "drawCalls": 35,
+      "cameraZ": 10.34
+    },
+    {
+      "env": "architecture",
+      "triangles": 2048,
+      "drawCalls": 29,
+      "cameraZ": 11.1
+    },
+    {
+      "env": "intelligence",
+      "triangles": 5382,
+      "drawCalls": 39,
+      "cameraZ": 9.341
+    },
+    {
+      "env": "outlook",
+      "triangles": 10046,
+      "drawCalls": 57,
+      "cameraZ": 9.825
+    }
+  ],
+  "seoChecks": {
+    "/": {
+      "status": 200,
+      "title": "Beyond the Known. By Design.",
+      "canonical": "https://midshasumresearch.com",
+      "robots": "index, follow",
+      "overflow": false,
+      "brokenImages": 0
+    },
+    "/about": {
+      "status": 200,
+      "title": "About | MidShaSum Research",
+      "canonical": "https://midshasumresearch.com/about",
+      "robots": "index, follow",
+      "overflow": false,
+      "brokenImages": 0
+    },
+    "/research": {
+      "status": 200,
+      "title": "Research | MidShaSum Research",
+      "canonical": "https://midshasumresearch.com/research",
+      "robots": "index, follow",
+      "overflow": false,
+      "brokenImages": 0
+    },
+    "/technology": {
+      "status": 200,
+      "title": "Technology | MidShaSum Research",
+      "canonical": "https://midshasumresearch.com/technology",
+      "robots": "index, follow",
+      "overflow": false,
+      "brokenImages": 0
+    },
+    "/intelligence": {
+      "status": 200,
+      "title": "Intelligence | MidShaSum Research",
+      "canonical": "https://midshasumresearch.com/intelligence",
+      "robots": "index, follow",
+      "overflow": false,
+      "brokenImages": 0
+    },
+    "/ira-dev": {
+      "status": 200,
+      "title": "Ira Dev, Virtual Executive & Brand Spokesperson | MidShaSum Research",
+      "canonical": "https://midshasumresearch.com/ira-dev",
+      "robots": "index, follow",
+      "overflow": false,
+      "brokenImages": 0
+    },
+    "/contact": {
+      "status": 200,
+      "title": "Contact | MidShaSum Research",
+      "canonical": "https://midshasumresearch.com/contact",
+      "robots": "index, follow",
+      "overflow": false,
+      "brokenImages": 0
+    },
+    "/privacy": {
+      "status": 200,
+      "title": "Privacy Policy | MidShaSum Research",
+      "canonical": "https://midshasumresearch.com/privacy",
+      "robots": "noindex, follow",
+      "overflow": false,
+      "brokenImages": 0
+    },
+    "/terms": {
+      "status": 200,
+      "title": "Terms of Use | MidShaSum Research",
+      "canonical": "https://midshasumresearch.com/terms",
+      "robots": "noindex, follow",
+      "overflow": false,
+      "brokenImages": 0
+    },
+    "/disclosures": {
+      "status": 200,
+      "title": "Risk and Regulatory Disclosures | MidShaSum Research",
+      "canonical": "https://midshasumresearch.com/disclosures",
+      "robots": "noindex, follow",
+      "overflow": false,
+      "brokenImages": 0
+    }
+  },
+  "contactValidation": {
+    "formPresent": false,
+    "nameRequired": false,
+    "categoryRequired": false,
+    "submitDisabledWhenUnconfigured": false
+  },
+  "mobileChecks": {
+    "390x844": {
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "hasOverflow": false
+    },
+    "360x800": {
+      "scrollWidth": 360,
+      "innerWidth": 360,
+      "hasOverflow": false
+    }
+  },
+  "consoleErrors": [],
+  "pageErrors": []
+}

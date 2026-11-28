@@ -87,7 +87,7 @@ export default function TechnologyPage() {
             {architectureLayers.map((item) => (
               <div
                 key={item.layer}
-                className="grid gap-6 border border-white/10 bg-[#0d1117]/80 p-6 md:grid-cols-[0.7fr_1.3fr_1fr] md:items-center md:p-8"
+                className="glass-card grid gap-6 p-6 md:grid-cols-[0.7fr_1.3fr_1fr] md:items-center md:p-8"
               >
                 <div>
                   <span className="font-mono text-[10px] uppercase tracking-[.22em] text-[#c9a227]">

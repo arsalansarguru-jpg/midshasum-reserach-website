@@ -47,7 +47,7 @@ export function IntelligenceLibrary({ articles }: { articles: IntelligenceArticl
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search publications by title, topic or category..."
             aria-label="Search publications"
-            className="w-full border border-white/10 bg-[#0d1015] py-3 pl-11 pr-4 text-sm text-white placeholder:text-white/35 outline-none transition-colors focus:border-[#c9a227]"
+            className="glass-panel w-full py-3 pl-11 pr-4 text-sm text-white placeholder:text-white/35 outline-none transition-colors focus:!border-[#c9a227]"
           />
         </div>
 
@@ -62,10 +62,10 @@ export function IntelligenceLibrary({ articles }: { articles: IntelligenceArticl
                   role="tab"
                   aria-selected={active}
                   onClick={() => setActiveCategory(category)}
-                  className={`border px-3.5 py-2 font-mono text-[10px] uppercase tracking-[.16em] transition-colors ${
+                  className={`px-3.5 py-2 font-mono text-[10px] uppercase tracking-[.16em] transition-colors ${
                     active
-                      ? "border-[#c9a227] bg-[#c9a227]/15 text-[#e1c46b]"
-                      : "border-white/10 bg-[#0d1015] text-white/55 hover:border-white/25 hover:text-white"
+                      ? "glass-card-gold text-[#e1c46b]"
+                      : "glass-panel text-white/55 hover:!border-white/25 hover:text-white"
                   }`}
                 >
                   {category}
@@ -86,7 +86,7 @@ export function IntelligenceLibrary({ articles }: { articles: IntelligenceArticl
             <Link
               key={article.slug}
               href={`/intelligence/${article.slug}`}
-              className="group flex flex-col justify-between border border-white/10 bg-[#0b0d12] p-7 transition-colors hover:border-[#c9a227]/45"
+              className="glass-card-interactive group flex flex-col justify-between p-7"
             >
               <div>
                 <div className="flex items-center justify-between gap-4">
@@ -116,7 +116,7 @@ export function IntelligenceLibrary({ articles }: { articles: IntelligenceArticl
           ))}
         </div>
       ) : (
-        <div className="border-y border-white/10 py-10">
+        <div className="glass-card p-8 md:p-10">
           <div className="flex items-start gap-5">
             <BookOpen className="mt-1 shrink-0 text-[#c9a227]" size={24} aria-hidden="true" />
             <div>

@@ -139,7 +139,7 @@ export default function IraDevPage() {
         </div>
       </section>
 
-      <nav aria-label="Ira Dev profile sections" className="border-b border-white/10 bg-[#0b0e12]">
+      <nav aria-label="Ira Dev profile sections" className="glass-panel border-x-0 border-b border-white/10">
         <div className="container-shell flex gap-6 overflow-x-auto py-4 text-[10px] uppercase tracking-[.16em] text-white/50 sm:gap-9">
           <Link className="whitespace-nowrap transition-colors hover:text-[#e1c46b]" href="#profile">Profile</Link>
           <Link className="whitespace-nowrap transition-colors hover:text-[#e1c46b]" href="#representation">Representation</Link>
@@ -220,12 +220,12 @@ export default function IraDevPage() {
               </p>
             </div>
           </div>
-          <div className="mt-16 grid border-t border-white/15 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {visionPriorities.map(([title, detail], index) => (
-              <div key={title} className={`border-b border-white/10 py-5 sm:px-5 lg:px-6 ${index % 3 !== 0 ? "sm:border-l sm:border-white/10" : ""} ${index === 0 || index === 3 ? "sm:pl-0 lg:pl-0" : ""}`}>
+              <div key={title} className="glass-card p-6">
                 <p className="font-display text-[10px] tracking-[.15em] text-[#d1ae49]">{String(index + 1).padStart(2, "0")}</p>
                 <h3 className="font-display mt-3 text-lg font-light text-white">{title}</h3>
-                <p className="mt-2 text-xs leading-6 text-white/45">{detail}</p>
+                <p className="mt-2 text-xs leading-6 text-white/55">{detail}</p>
               </div>
             ))}
           </div>
@@ -247,17 +247,17 @@ export default function IraDevPage() {
               The intellectual interests expressed through Ira Dev span connected fields shaping economies, industries and societies. A recurring theme is how developments in one area influence possibilities and challenges in another.
             </p>
           </Reveal>
-          <div className="grid grid-cols-1 border-t border-white/15 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             {areasOfInterest.map((area, index) => (
-              <Reveal key={area} className={`group flex min-h-20 items-center gap-4 border-b border-white/10 py-5 ${index % 2 === 0 ? "sm:pr-6" : "sm:border-l sm:pl-6"}`}>
+              <Reveal key={area} className="glass-card-interactive group flex min-h-20 items-center gap-4 p-5">
                 <span aria-hidden="true" className="font-display text-[10px] tracking-[.14em] text-[#d1ae49]/75">
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <h3 className="text-sm leading-6 text-white/75 transition-colors group-hover:text-white">{area}</h3>
+                <h3 className="text-sm leading-6 text-white/80 transition-colors group-hover:text-white">{area}</h3>
                 <ArrowUpRight aria-hidden="true" size={14} className="ml-auto shrink-0 text-white/25 transition-colors group-hover:text-[#d1ae49]" />
               </Reveal>
             ))}
-            <p className="border-b border-white/10 py-5 text-xs leading-6 text-white/40 sm:col-span-2">
+            <p className="pt-2 text-xs leading-6 text-white/45 sm:col-span-2">
               These interests reflect the institutional direction of MidShaSum Research and are expressed through Ira Dev in her representative capacity.
             </p>
           </div>
@@ -290,12 +290,12 @@ export default function IraDevPage() {
               MidShaSum Research pursues a considered exploration of quantitative research, financial technology and intelligent systems. Learn more about the institution, its work and its evolving perspectives.
             </p>
           </Reveal>
-          <div className="mt-10 grid border-t border-white/15 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
             {institutionalLinks.map(([label, href, detail], index) => (
               <Link
                 key={href}
                 href={href}
-                className={`group border-b border-white/10 py-5 transition-colors hover:bg-white/[.025] sm:px-4 lg:px-5 ${index === 0 ? "sm:pl-0" : "sm:border-l sm:border-white/10"} ${index === institutionalLinks.length - 1 ? "lg:pr-0" : ""}`}
+                className="glass-card-interactive group p-5"
               >
                 <span className="font-display text-[10px] tracking-[.15em] text-[#d1ae49]">{String(index + 1).padStart(2, "0")}</span>
                 <span className="mt-3 flex items-center justify-between font-display text-lg font-light text-white/85">

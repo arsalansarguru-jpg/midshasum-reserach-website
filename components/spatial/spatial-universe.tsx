@@ -108,7 +108,7 @@ export function SpatialUniverse() {
         aria-label="MidShaSum Research five-chapter spatial journey"
         data-testid="spatial-universe"
       >
-        <div className="spatial-universe__sticky sticky top-[76px] z-0 -mb-[calc(100svh-76px)] h-[calc(100svh-76px)] min-h-[570px] overflow-hidden">
+        <div className="spatial-universe__sticky sticky top-16 z-0 -mb-[calc(100svh-64px)] h-[calc(100svh-64px)] min-h-[570px] overflow-hidden lg:top-0 lg:-mb-[100svh] lg:h-[100svh]">
           <div className="spatial-universe__fallback absolute inset-0" aria-hidden="true" />
           {sceneVisible && !reducedMotion && (
             <SpatialErrorBoundary>
@@ -247,14 +247,14 @@ export function SpatialUniverse() {
             </Link>
           </div>
 
-          <div className="border-y border-white/10 py-10">
+          <div className="glass-card p-8 md:p-10">
             {intelligenceArticles.length > 0 ? (
               <div className="grid gap-5 sm:grid-cols-2">
                 {intelligenceArticles.map((article) => (
                   <Link
                     key={article.slug}
                     href={`/intelligence/${article.slug}`}
-                    className="group border border-white/10 bg-[#080808]/80 p-6 transition-colors hover:border-[#c9a227]/45"
+                    className="glass-card-interactive group block p-6"
                   >
                     <span className="eyebrow">{article.category}</span>
                     <h3 className="font-display mt-3 text-xl font-light text-white group-hover:text-[#e1c46b]">
@@ -309,18 +309,18 @@ export function SpatialUniverse() {
             </p>
           </div>
 
-          <div className="mt-12 grid gap-0 border-y border-white/10 bg-[#080808]/75 backdrop-blur-sm md:grid-cols-3">
-            <div className="border-b border-white/10 py-7 md:border-b-0 md:pr-7">
+          <div className="glass-card-elevated mt-12 grid gap-0 md:grid-cols-3">
+            <div className="border-b border-white/10 p-7 md:border-b-0">
               <Mail className="text-[#c9a227]" size={20} aria-hidden="true" />
               <h3 className="font-display mt-5 text-lg text-white">Institutional enquiries</h3>
               <p className="mt-2 text-sm leading-7 text-white/50">General enquiries and institutional introductions.</p>
             </div>
-            <div className="border-b border-white/10 py-7 md:border-b-0 md:border-l md:border-white/10 md:px-7">
+            <div className="border-b border-white/10 p-7 md:border-b-0 md:border-l md:border-white/10">
               <Handshake className="text-[#c9a227]" size={20} aria-hidden="true" />
               <h3 className="font-display mt-5 text-lg text-white">Partnerships</h3>
               <p className="mt-2 text-sm leading-7 text-white/50">Technology, research and strategic collaborations.</p>
             </div>
-            <div className="py-7 md:border-l md:border-white/10 md:pl-7">
+            <div className="p-7 md:border-l md:border-white/10">
               <Lightbulb className="text-[#c9a227]" size={20} aria-hidden="true" />
               <h3 className="font-display mt-5 text-lg text-white">Licensing &amp; projects</h3>
               <p className="mt-2 text-sm leading-7 text-white/50">Discuss potential technology licensing and project scope.</p>

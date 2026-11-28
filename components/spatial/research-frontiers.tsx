@@ -140,7 +140,7 @@ export function ResearchFrontiers() {
               type="button"
               onClick={() => stepSlider("ArrowLeft")}
               aria-label="Previous research frontier"
-              className="border border-white/15 bg-[#101216] p-2 text-white/70 transition-colors hover:border-[#c9a227] hover:text-[#e1c46b]"
+              className="glass-panel p-2 text-white/70 transition-colors hover:!border-[#c9a227] hover:text-[#e1c46b]"
             >
               <ArrowLeft size={14} aria-hidden="true" />
             </button>
@@ -148,7 +148,7 @@ export function ResearchFrontiers() {
               type="button"
               onClick={() => stepSlider("ArrowRight")}
               aria-label="Next research frontier"
-              className="border border-white/15 bg-[#101216] p-2 text-white/70 transition-colors hover:border-[#c9a227] hover:text-[#e1c46b]"
+              className="glass-panel p-2 text-white/70 transition-colors hover:!border-[#c9a227] hover:text-[#e1c46b]"
             >
               <ArrowRight size={14} aria-hidden="true" />
             </button>
@@ -216,10 +216,10 @@ export function ResearchFrontiers() {
                   setSelected(domain);
                   setDrawerOpen(true);
                 }}
-                className={`border px-3.5 py-2 font-mono text-[10px] uppercase tracking-[.16em] transition-colors ${
+                className={`px-3.5 py-2 font-mono text-[10px] uppercase tracking-[.16em] transition-colors ${
                   active
-                    ? "border-[#c9a227] bg-[#c9a227]/12 text-[#e1c46b]"
-                    : "border-white/10 bg-[#0a1018]/60 text-white/55 hover:border-white/25 hover:text-white"
+                    ? "glass-card-gold text-[#e1c46b]"
+                    : "glass-panel text-white/55 hover:!border-white/25 hover:text-white"
                 }`}
               >
                 {domain.code} · {domain.title}
@@ -229,7 +229,7 @@ export function ResearchFrontiers() {
         </div>
 
         {/* Active Frontier Dossier */}
-        <div className="mt-6 grid gap-8 border border-white/10 bg-[#0a1018]/75 p-6 md:grid-cols-[1.4fr_1fr] md:items-center md:p-8">
+        <div className="glass-card-elevated mt-6 grid gap-8 p-6 md:grid-cols-[1.4fr_1fr] md:items-center md:p-8">
           <div>
             <div className="flex items-center justify-between gap-4">
               <span className="font-mono text-[10px] uppercase tracking-[.22em] text-[#c9a227]">

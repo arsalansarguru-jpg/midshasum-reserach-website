@@ -30,7 +30,7 @@ export function ContactForm({ deliveryConfigured }: { deliveryConfigured: boolea
   }
 
   return (
-    <form onSubmit={submit} className="card-line p-7 md:p-10">
+    <form onSubmit={submit} className="glass-card-elevated p-7 md:p-10">
       <div className="grid gap-6 md:grid-cols-2">
         <label className="text-xs text-white/60">Name<input name="name" autoComplete="name" required minLength={2} maxLength={100} className="mt-3 w-full border border-white/10 bg-[#0a0b0d] px-4 py-3 text-sm text-white outline-none focus:border-[#c9a227]" /></label>
         <label className="text-xs text-white/60">Email<input name="email" type="email" autoComplete="email" required maxLength={254} className="mt-3 w-full border border-white/10 bg-[#0a0b0d] px-4 py-3 text-sm text-white outline-none focus:border-[#c9a227]" /></label>

@@ -718,11 +718,11 @@ function SpatialComposition({
     const envIdx = Math.min(ENVIRONMENTS.length - 1, Math.round(stage));
 
     const desktopPos: [number, number, number][] = [
-      [2.38, 0.04, 0],
-      [2.2, 0.1, 0],
-      [2.28, -0.04, 0],
-      [2.28, 0.1, 0],
-      [2.15, -0.14, 0.2],
+      [2.15, 0.04, 0],
+      [2.0, 0.1, 0],
+      [2.08, -0.04, 0],
+      [2.08, 0.1, 0],
+      [2.0, -0.14, 0.2],
     ];
     const mobilePos: [number, number, number][] = [
       [0, -2.3, 0],
@@ -835,7 +835,7 @@ function SpatialComposition({
       </group>
 
       <ContactShadows
-        position={compact ? [0, -3.1, 0] : [2.36, -2.1, 0]}
+        position={compact ? [0, -3.1, 0] : [2.1, -2.1, 0]}
         opacity={compact ? 0.18 : 0.26}
         scale={compact ? 4.0 : 6.5}
         blur={3.2}

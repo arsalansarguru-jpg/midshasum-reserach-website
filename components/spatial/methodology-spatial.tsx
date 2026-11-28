@@ -86,10 +86,10 @@ export function MethodologySpatial() {
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-16">
           <div>
             <p className="eyebrow">Proposed Research Methodology</p>
-            <h2 className="font-display mt-5 text-3xl font-light leading-tight tracking-[-.045em] text-[#f7f7f5] sm:text-5xl">
+            <h2 className="type-section mt-5 text-[#f7f7f5]">
               Discipline before <span className="text-[#e1c46b]">conclusion.</span>
             </h2>
-            <p className="mt-5 max-w-md text-sm leading-7 text-white/55">
+            <p className="type-body-sm mt-5 max-w-md text-white/55">
               A proposed six-stage inquiry sequence: Research Question → Data → Method → Validation → Interpretation → Publication.
             </p>
             <p className="mt-4 max-w-md border-l border-[#c9a227] pl-4 text-xs leading-6 text-white/45">

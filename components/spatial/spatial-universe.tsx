@@ -133,10 +133,10 @@ export function SpatialUniverse() {
           {spatialChapters.map((chapter, index) => {
             const isOpening = index === 0;
             const isOutlook = index === spatialChapters.length - 1;
-            const headingClass = `font-display mt-5 font-light leading-[1.08] tracking-[-.05em] text-[#f7f7f5] ${
+            const headingClass = `mt-5 text-[#f7f7f5] ${
               isOpening
-                ? "max-w-[650px] text-[clamp(2.6rem,6.6vw,5.8rem)]"
-                : "max-w-[560px] text-3xl sm:text-5xl lg:text-[3.25rem]"
+                ? "type-hero max-w-[650px]"
+                : "type-section max-w-[560px]"
             }`;
             const heading = isOpening ? (
               <>
@@ -176,7 +176,7 @@ export function SpatialUniverse() {
                   ) : (
                     <h2 className={headingClass}>{heading}</h2>
                   )}
-                  <p className="mt-6 max-w-[500px] text-sm leading-7 text-white/65 sm:text-base sm:leading-8">
+                  <p className="type-body mt-6 max-w-[500px] text-white/65">
                     {chapter.body}
                   </p>
                   {(chapter.primary || chapter.secondary) && (

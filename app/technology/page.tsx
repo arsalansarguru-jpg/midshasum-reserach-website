@@ -75,7 +75,7 @@ export default function TechnologyPage() {
         <div className="container-shell">
           <div className="max-w-2xl">
             <div className="eyebrow">Conceptual Stack</div>
-            <h2 className="font-display mt-5 text-3xl font-light leading-tight md:text-4xl">
+            <h2 className="type-section mt-5 text-white">
               Layered systems architecture for reproducible inquiry.
             </h2>
             <p className="mt-4 text-sm leading-7 text-white/50">
@@ -93,11 +93,11 @@ export default function TechnologyPage() {
                   <span className="font-mono text-[10px] uppercase tracking-[.22em] text-[#c9a227]">
                     {item.layer}
                   </span>
-                  <h3 className="font-display mt-2 text-xl font-light text-white">
+                  <h3 className="type-card mt-2 text-white">
                     {item.title}
                   </h3>
                 </div>
-                <p className="text-sm leading-7 text-white/55">{item.description}</p>
+                <p className="type-body-sm text-white/55">{item.description}</p>
                 <ul className="space-y-2 border-t border-white/10 pt-4 text-xs text-white/65 md:border-l md:border-t-0 md:pl-6 md:pt-0">
                   {item.specs.map((spec) => (
                     <li key={spec} className="flex items-center gap-2.5">

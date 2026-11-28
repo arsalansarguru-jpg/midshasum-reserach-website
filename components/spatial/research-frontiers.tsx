@@ -191,7 +191,7 @@ export function ResearchFrontiers() {
           orientation="portrait"
           eyebrow="Exhibition · Proposed Domains"
           title={
-            <span className="font-display text-3xl font-light tracking-[-.04em] text-white sm:text-5xl lg:text-6xl">
+            <span className="type-section text-white">
               Frontiers of <span className="text-[#d8b84f]">Inquiry.</span>
             </span>
           }
@@ -246,10 +246,10 @@ export function ResearchFrontiers() {
                 </button>
               )}
             </div>
-            <h3 className="font-display mt-3 text-2xl font-light text-white sm:text-3xl">
+            <h3 className="type-card mt-3 text-white">
               {selected.title}
             </h3>
-            <p className="mt-3 max-w-2xl text-sm leading-7 text-white/60">
+            <p className="type-body-sm mt-3 max-w-2xl text-white/60">
               {selected.summary}
             </p>
           </div>

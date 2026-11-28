@@ -1,0 +1,86 @@
+{
+  "fontChecks": {
+    "/": {
+      "bodyFont": "Inter, \"Inter Fallback\", Arial, sans-serif",
+      "bodySize": "16.96px",
+      "h1Font": "Sora, \"Sora Fallback\", Inter, \"Inter Fallback\", sans-serif",
+      "h1Size": "79.36px",
+      "eyebrowFont": "\"IBM Plex Mono\", \"IBM Plex Mono Fallback\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+      "eyebrowSize": "10.368px",
+      "loadedFamilies": [
+        "Inter",
+        "Inter Fallback",
+        "Sora",
+        "Sora Fallback",
+        "IBM Plex Mono",
+        "IBM Plex Mono Fallback"
+      ]
+    },
+    "/about": {
+      "bodyFont": "Inter, \"Inter Fallback\", Arial, sans-serif",
+      "bodySize": "16.96px",
+      "h1Font": "Sora, \"Sora Fallback\", Inter, \"Inter Fallback\", sans-serif",
+      "h1Size": "56.48px",
+      "eyebrowFont": "\"IBM Plex Mono\", \"IBM Plex Mono Fallback\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+      "eyebrowSize": "10.368px",
+      "loadedFamilies": [
+        "Inter",
+        "Sora",
+        "IBM Plex Mono"
+      ]
+    },
+    "/research": {
+      "bodyFont": "Inter, \"Inter Fallback\", Arial, sans-serif",
+      "bodySize": "16.96px",
+      "h1Font": "Sora, \"Sora Fallback\", Inter, \"Inter Fallback\", sans-serif",
+      "h1Size": "56.48px",
+      "eyebrowFont": "\"IBM Plex Mono\", \"IBM Plex Mono Fallback\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+      "eyebrowSize": "10.368px",
+      "loadedFamilies": [
+        "Inter",
+        "Inter Fallback",
+        "Sora",
+        "IBM Plex Mono"
+      ]
+    },
+    "/technology": {
+      "bodyFont": "Inter, \"Inter Fallback\", Arial, sans-serif",
+      "bodySize": "16.96px",
+      "h1Font": "Sora, \"Sora Fallback\", Inter, \"Inter Fallback\", sans-serif",
+      "h1Size": "56.48px",
+      "eyebrowFont": "\"IBM Plex Mono\", \"IBM Plex Mono Fallback\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+      "eyebrowSize": "10.368px",
+      "loadedFamilies": [
+        "Inter",
+        "Sora",
+        "IBM Plex Mono"
+      ]
+    },
+    "/intelligence": {
+      "bodyFont": "Inter, \"Inter Fallback\", Arial, sans-serif",
+      "bodySize": "16.96px",
+      "h1Font": "Sora, \"Sora Fallback\", Inter, \"Inter Fallback\", sans-serif",
+      "h1Size": "56.48px",
+      "eyebrowFont": "\"IBM Plex Mono\", \"IBM Plex Mono Fallback\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+      "eyebrowSize": "10.368px",
+      "loadedFamilies": [
+        "Inter",
+        "Sora",
+        "IBM Plex Mono"
+      ]
+    },
+    "/ira-dev": {
+      "bodyFont": "Inter, \"Inter Fallback\", Arial, sans-serif",
+      "bodySize": "16.96px",
+      "h1Font": "Sora, \"Sora Fallback\", Inter, \"Inter Fallback\", sans-serif",
+      "h1Size": "88px",
+      "eyebrowFont": "\"IBM Plex Mono\", \"IBM Plex Mono Fallback\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+      "eyebrowSize": "10.368px",
+      "loadedFamilies": [
+        "Inter",
+        "Sora",
+        "IBM Plex Mono"
+      ]
+    }
+  }
+}

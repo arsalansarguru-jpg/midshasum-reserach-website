@@ -1,0 +1,60 @@
+{
+  "baseUrl": "https://midshasum-research-preview.vercel.app",
+  "results": {
+    "/": {
+      "status": 200,
+      "overflow": false,
+      "brokenImages": 0,
+      "railVisible": true,
+      "backdropFilter": "blur(20px) saturate(1.4)"
+    },
+    "/about": {
+      "status": 200,
+      "overflow": false,
+      "brokenImages": 0,
+      "railVisible": true,
+      "backdropFilter": "blur(20px) saturate(1.35)"
+    },
+    "/research": {
+      "status": 200,
+      "overflow": false,
+      "brokenImages": 0,
+      "railVisible": true,
+      "backdropFilter": "blur(20px) saturate(1.35)"
+    },
+    "/technology": {
+      "status": 200,
+      "overflow": false,
+      "brokenImages": 0,
+      "railVisible": true,
+      "backdropFilter": "blur(20px) saturate(1.35)"
+    },
+    "/intelligence": {
+      "status": 200,
+      "overflow": false,
+      "brokenImages": 0,
+      "railVisible": true,
+      "backdropFilter": "blur(20px) saturate(1.4)"
+    },
+    "/ira-dev": {
+      "status": 200,
+      "overflow": false,
+      "brokenImages": 0,
+      "railVisible": true,
+      "backdropFilter": "blur(20px) saturate(1.35)"
+    },
+    "/contact": {
+      "status": 200,
+      "overflow": false,
+      "brokenImages": 0,
+      "railVisible": true,
+      "backdropFilter": "blur(20px) saturate(1.35)"
+    }
+  },
+  "mobileCheck": {
+    "overflow": false,
+    "menuButtonVisible": true
+  },
+  "consoleErrors": [],
+  "pageErrors": []
+}

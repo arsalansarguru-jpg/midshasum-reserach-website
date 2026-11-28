@@ -1,6 +1,15 @@
 @import "tailwindcss";
 
+@theme inline {
+  --font-sans: var(--font-inter), Arial, sans-serif;
+  --font-display: var(--font-sora), var(--font-inter), sans-serif;
+  --font-mono: var(--font-ibm-plex-mono), ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
 :root {
+  --font-display: var(--font-sora), var(--font-inter), sans-serif;
+  --font-body: var(--font-inter), Arial, sans-serif;
+  --font-mono: var(--font-ibm-plex-mono), ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   --bg: #080808;
   --navy: #0a1628;
   --surface: #101216;
@@ -88,14 +97,74 @@
 html { scroll-behavior: smooth; background: var(--bg); }
 body {
   margin: 0; background: var(--bg); color: var(--text);
-  font-family: var(--font-inter), Arial, sans-serif; -webkit-font-smoothing: antialiased;
+  font-family: var(--font-body); -webkit-font-smoothing: antialiased;
+  font-size: clamp(0.9375rem, 0.2vw + 0.88rem, 1.0625rem);
+  line-height: 1.75;
 }
 a { color: inherit; text-decoration: none; }
-button, input, textarea { font: inherit; }
+button, input, select, textarea { font: inherit; }
 ::selection { background: var(--gold); color: #090909; }
-.font-display { font-family: var(--font-sora), var(--font-inter), sans-serif; }
+.font-display { font-family: var(--font-display); }
+.font-body { font-family: var(--font-body); }
+.font-mono { font-family: var(--font-mono); }
+.type-hero {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 4.4vw + 1rem, 5.25rem);
+  font-weight: 300;
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+.type-page {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 2.7vw + 1.1rem, 3.85rem);
+  font-weight: 300;
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+}
+.type-section {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 2vw + 0.9rem, 2.85rem);
+  font-weight: 300;
+  line-height: 1.18;
+  letter-spacing: -0.035em;
+}
+.type-card {
+  font-family: var(--font-display);
+  font-size: clamp(1.125rem, 0.65vw + 0.92rem, 1.5rem);
+  font-weight: 400;
+  line-height: 1.28;
+  letter-spacing: -0.02em;
+}
+.type-body {
+  font-family: var(--font-body);
+  font-size: clamp(0.9375rem, 0.2vw + 0.88rem, 1.0625rem);
+  font-weight: 400;
+  line-height: 1.75;
+}
+.type-body-sm {
+  font-family: var(--font-body);
+  font-size: clamp(0.875rem, 0.15vw + 0.82rem, 0.9375rem);
+  font-weight: 400;
+  line-height: 1.7;
+}
+.type-meta {
+  font-family: var(--font-mono);
+  font-size: clamp(0.5625rem, 0.14vw + 0.54rem, 0.6875rem);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
 .container-shell { width: min(1180px, calc(100% - 48px)); margin-inline: auto; }
-.eyebrow { color: var(--gold-light); letter-spacing: .22em; text-transform: uppercase; font-size: 10px; font-weight: 600; }
+.eyebrow {
+  font-family: var(--font-mono);
+  color: var(--gold-light);
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  font-size: clamp(0.5625rem, 0.12vw + 0.54rem, 0.6875rem);
+  font-weight: 500;
+  line-height: 1.5;
+}
 .gold-rule { height: 1px; background: linear-gradient(90deg, var(--gold), transparent); }
 .grid-glow {
   background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
@@ -193,9 +262,9 @@ button, input, textarea { font: inherit; }
 }
 .card-line:hover { border-color: var(--glass-border-hover); transform: translateY(-2px); }
 .transition-card { transition: border-color .25s ease, transform .25s ease, background .25s ease; }
-.btn-gold { display:inline-flex; align-items:center; gap:12px; background:var(--gold); color:#08090b; padding:14px 20px; font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; transition:background .2s ease, transform .2s ease; }
+.btn-gold { font-family: var(--font-body); display:inline-flex; align-items:center; gap:12px; background:var(--gold); color:#08090b; padding:14px 20px; font-size:11px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; transition:background .2s ease, transform .2s ease; }
 .btn-gold:hover { background:var(--gold-light); transform:translateY(-2px); }
-.btn-quiet { display:inline-flex; align-items:center; gap:10px; color:#e8e5dc; padding:14px 4px; font-size:11px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; }
+.btn-quiet { font-family: var(--font-body); display:inline-flex; align-items:center; gap:10px; color:#e8e5dc; padding:14px 4px; font-size:11px; font-weight:500; letter-spacing:.12em; text-transform:uppercase; }
 .section-space {
   padding-block: 112px;
   background-image:

@@ -1,19 +1,28 @@
 import type { Metadata } from "next";
-import { Inter, Sora } from "next/font/google";
+import { IBM_Plex_Mono, Inter, Sora } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 
 const inter = Inter({
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
   display: "swap",
   variable: "--font-inter"
 });
 
 const sora = Sora({
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
   display: "swap",
   variable: "--font-sora"
+});
+
+const ibmPlexMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  display: "swap",
+  variable: "--font-ibm-plex-mono"
 });
 
 export const metadata: Metadata = {
@@ -59,8 +68,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.variable} ${sora.variable}`}>
+    <html lang="en" className={`${inter.variable} ${sora.variable} ${ibmPlexMono.variable}`}>
+      <body>
         <a className="skip-link" href="#main-content">Skip to content</a>
         <SiteHeader />
         <div className="lg:pl-[224px] 2xl:pl-[240px]">

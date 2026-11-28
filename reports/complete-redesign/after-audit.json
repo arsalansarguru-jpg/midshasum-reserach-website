@@ -1,0 +1,176 @@
+{
+  "audit": {
+    "/": {
+      "status": 200,
+      "desktop": {
+        "overflow1440": false,
+        "scrollHeight": 9626,
+        "h1": "Beyond the Known.By Design.",
+        "h1Font": "Sora, \"Sora Fallback\", Inter, \"Inter Fallback\", sans-serif",
+        "bodyFont": "Inter, \"Inter Fallback\", Arial, sans-serif",
+        "brokenImages": 0
+      },
+      "desktop1280Overflow": false,
+      "mobile": {
+        "overflow390": false,
+        "scrollHeight": 11674
+      },
+      "mobile360Overflow": false
+    },
+    "/about": {
+      "status": 200,
+      "desktop": {
+        "overflow1440": false,
+        "scrollHeight": 2722,
+        "h1": "An institution shaped by the pursuit of what comes next.",
+        "h1Font": "Sora, \"Sora Fallback\", Inter, \"Inter Fallback\", sans-serif",
+        "bodyFont": "Inter, \"Inter Fallback\", Arial, sans-serif",
+        "brokenImages": 0
+      },
+      "desktop1280Overflow": false,
+      "mobile": {
+        "overflow390": false,
+        "scrollHeight": 3796
+      },
+      "mobile360Overflow": false
+    },
+    "/research": {
+      "status": 200,
+      "desktop": {
+        "overflow1440": false,
+        "scrollHeight": 3778,
+        "h1": "Investigating systems. Testing assumptions. Building understanding.",
+        "h1Font": "Sora, \"Sora Fallback\", Inter, \"Inter Fallback\", sans-serif",
+        "bodyFont": "Inter, \"Inter Fallback\", Arial, sans-serif",
+        "brokenImages": 0
+      },
+      "desktop1280Overflow": false,
+      "mobile": {
+        "overflow390": false,
+        "scrollHeight": 5308
+      },
+      "mobile360Overflow": false
+    },
+    "/technology": {
+      "status": 200,
+      "desktop": {
+        "overflow1440": false,
+        "scrollHeight": 3129,
+        "h1": "Engineering the systems behind new possibilities.",
+        "h1Font": "Sora, \"Sora Fallback\", Inter, \"Inter Fallback\", sans-serif",
+        "bodyFont": "Inter, \"Inter Fallback\", Arial, sans-serif",
+        "brokenImages": 0
+      },
+      "desktop1280Overflow": false,
+      "mobile": {
+        "overflow390": false,
+        "scrollHeight": 4738
+      },
+      "mobile360Overflow": false
+    },
+    "/intelligence": {
+      "status": 200,
+      "desktop": {
+        "overflow1440": false,
+        "scrollHeight": 1898,
+        "h1": "A space for ideas, analysis and considered perspectives.",
+        "h1Font": "Sora, \"Sora Fallback\", Inter, \"Inter Fallback\", sans-serif",
+        "bodyFont": "Inter, \"Inter Fallback\", Arial, sans-serif",
+        "brokenImages": 0
+      },
+      "desktop1280Overflow": false,
+      "mobile": {
+        "overflow390": false,
+        "scrollHeight": 2695
+      },
+      "mobile360Overflow": false
+    },
+    "/ira-dev": {
+      "status": 200,
+      "desktop": {
+        "overflow1440": false,
+        "scrollHeight": 6078,
+        "h1": "Ira Dev.",
+        "h1Font": "Sora, \"Sora Fallback\", Inter, \"Inter Fallback\", sans-serif",
+        "bodyFont": "Inter, \"Inter Fallback\", Arial, sans-serif",
+        "brokenImages": 0
+      },
+      "desktop1280Overflow": false,
+      "mobile": {
+        "overflow390": false,
+        "scrollHeight": 9906
+      },
+      "mobile360Overflow": false
+    },
+    "/contact": {
+      "status": 200,
+      "desktop": {
+        "overflow1440": false,
+        "scrollHeight": 1875,
+        "h1": "Start a conversation at the frontier.",
+        "h1Font": "Sora, \"Sora Fallback\", Inter, \"Inter Fallback\", sans-serif",
+        "bodyFont": "Inter, \"Inter Fallback\", Arial, sans-serif",
+        "brokenImages": 0
+      },
+      "desktop1280Overflow": false,
+      "mobile": {
+        "overflow390": false,
+        "scrollHeight": 2983
+      },
+      "mobile360Overflow": false
+    },
+    "/privacy": {
+      "status": 200,
+      "desktop": {
+        "overflow1440": false,
+        "scrollHeight": 2607,
+        "h1": "Privacy policy",
+        "h1Font": "Sora, \"Sora Fallback\", Inter, \"Inter Fallback\", sans-serif",
+        "bodyFont": "Inter, \"Inter Fallback\", Arial, sans-serif",
+        "brokenImages": 0
+      },
+      "desktop1280Overflow": false,
+      "mobile": {
+        "overflow390": false,
+        "scrollHeight": 3760
+      },
+      "mobile360Overflow": false
+    },
+    "/terms": {
+      "status": 200,
+      "desktop": {
+        "overflow1440": false,
+        "scrollHeight": 2247,
+        "h1": "Terms of use",
+        "h1Font": "Sora, \"Sora Fallback\", Inter, \"Inter Fallback\", sans-serif",
+        "bodyFont": "Inter, \"Inter Fallback\", Arial, sans-serif",
+        "brokenImages": 0
+      },
+      "desktop1280Overflow": false,
+      "mobile": {
+        "overflow390": false,
+        "scrollHeight": 3022
+      },
+      "mobile360Overflow": false
+    },
+    "/disclosures": {
+      "status": 200,
+      "desktop": {
+        "overflow1440": false,
+        "scrollHeight": 2468,
+        "h1": "Risk and regulatory disclosures",
+        "h1Font": "Sora, \"Sora Fallback\", Inter, \"Inter Fallback\", sans-serif",
+        "bodyFont": "Inter, \"Inter Fallback\", Arial, sans-serif",
+        "brokenImages": 0
+      },
+      "desktop1280Overflow": false,
+      "mobile": {
+        "overflow390": false,
+        "scrollHeight": 3471
+      },
+      "mobile360Overflow": false
+    }
+  },
+  "consoleErrors": [],
+  "failedRequests": []
+}

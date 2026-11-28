@@ -3,8 +3,8 @@
   "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
   "core": "MIDSHASUM SPATIAL CORE",
   "initial": {
-    "width": 1360,
-    "height": 1000,
+    "width": 1600,
+    "height": 928,
     "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
     "core": "MIDSHASUM SPATIAL CORE",
     "environment": "core",
@@ -15,44 +15,44 @@
     "cameraZ": 9.4
   },
   "afterPointer": {
-    "pointerX": 1.233,
-    "cameraX": 0.371,
-    "cameraY": -0.034
+    "pointerX": 0.88,
+    "cameraX": 0.294,
+    "cameraY": -0.012
   },
   "cameraResponded": true,
   "environmentProof": [
     {
       "environment": "core",
       "progress": 0,
-      "cameraX": 0.371,
+      "cameraX": 0.294,
       "cameraZ": 9.4,
       "triangles": 5026
     },
     {
       "environment": "research",
       "progress": 0.25,
-      "cameraX": 0.771,
+      "cameraX": 0.694,
       "cameraZ": 10.341,
       "triangles": 13546
     },
     {
       "environment": "architecture",
       "progress": 0.5,
-      "cameraX": -0.429,
+      "cameraX": -0.506,
       "cameraZ": 11.1,
       "triangles": 2048
     },
     {
       "environment": "intelligence",
       "progress": 0.75,
-      "cameraX": 0.471,
+      "cameraX": 0.394,
       "cameraZ": 9.341,
       "triangles": 5382
     },
     {
       "environment": "outlook",
       "progress": 0.98,
-      "cameraX": -0.579,
+      "cameraX": -0.656,
       "cameraZ": 9.813,
       "triangles": 5026
     }

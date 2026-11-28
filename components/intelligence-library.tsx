@@ -34,10 +34,10 @@ export function IntelligenceLibrary({ articles }: { articles: IntelligenceArticl
   return (
     <div className="space-y-8">
       {/* Search + Category Filter Bar */}
-      <div className="space-y-5 border-b border-white/10 pb-6">
+      <div className="space-y-5 border-b border-black/12 pb-6">
         <div className="relative">
           <Search
-            className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-white/35"
+            className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[#4E5561]"
             size={15}
             aria-hidden="true"
           />
@@ -47,7 +47,7 @@ export function IntelligenceLibrary({ articles }: { articles: IntelligenceArticl
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search publications by title, topic or category..."
             aria-label="Search publications"
-            className="glass-panel w-full py-3 pl-11 pr-4 text-sm text-white placeholder:text-white/35 outline-none transition-colors focus:!border-[#c9a227]"
+            className="w-full border border-black/15 bg-[#FAF8F4] py-3 pl-11 pr-4 text-sm text-[#0B0E13] placeholder:text-[#4E5561]/70 outline-none transition-colors focus:border-[#8C6D14]"
           />
         </div>
 
@@ -62,10 +62,10 @@ export function IntelligenceLibrary({ articles }: { articles: IntelligenceArticl
                   role="tab"
                   aria-selected={active}
                   onClick={() => setActiveCategory(category)}
-                  className={`px-3.5 py-2 font-mono text-[10px] uppercase tracking-[.16em] transition-colors ${
+                  className={`border px-3.5 py-2 font-mono text-[10px] uppercase tracking-[.16em] transition-colors ${
                     active
-                      ? "glass-card-gold text-[#e1c46b]"
-                      : "glass-panel text-white/55 hover:!border-white/25 hover:text-white"
+                      ? "border-[#0B0E13] bg-[#0B0E13] text-[#F2F0E9]"
+                      : "border-black/15 bg-[#FAF8F4] text-[#4E5561] hover:border-black/35 hover:text-[#0B0E13]"
                   }`}
                 >
                   {category}
@@ -73,7 +73,7 @@ export function IntelligenceLibrary({ articles }: { articles: IntelligenceArticl
               );
             })}
           </div>
-          <span className="font-mono text-[10px] uppercase tracking-[.2em] text-white/40">
+          <span className="font-mono text-[10px] uppercase tracking-[.2em] text-[#4E5561]">
             {filtered.length} {filtered.length === 1 ? "Entry" : "Entries"}
           </span>
         </div>
@@ -86,14 +86,14 @@ export function IntelligenceLibrary({ articles }: { articles: IntelligenceArticl
             <Link
               key={article.slug}
               href={`/intelligence/${article.slug}`}
-              className="glass-card-interactive group flex flex-col justify-between p-7"
+              className="group flex flex-col justify-between border border-black/12 bg-[#FAF8F4] p-7 transition-colors hover:border-[#8C6D14]"
             >
               <div>
                 <div className="flex items-center justify-between gap-4">
-                  <span className="eyebrow">{article.category}</span>
+                  <span className="eyebrow-ivory">{article.category}</span>
                   <time
                     dateTime={article.publishedAt}
-                    className="font-mono text-[10px] text-white/40"
+                    className="font-mono text-[10px] text-[#4E5561]"
                   >
                     {new Date(article.publishedAt).toLocaleDateString("en", {
                       dateStyle: "medium",
@@ -101,14 +101,14 @@ export function IntelligenceLibrary({ articles }: { articles: IntelligenceArticl
                     })}
                   </time>
                 </div>
-                <h2 className="font-display mt-4 text-2xl font-light text-white group-hover:text-[#e1c46b]">
+                <h2 className="font-display mt-4 text-2xl font-light text-[#0B0E13] group-hover:text-[#8C6D14]">
                   {article.title}
                 </h2>
-                <p className="mt-3 text-sm leading-7 text-white/55">{article.excerpt}</p>
+                <p className="mt-3 text-sm leading-7 text-[#4E5561]">{article.excerpt}</p>
               </div>
-              <div className="mt-6 flex items-center justify-between border-t border-white/10 pt-4 text-xs text-white/45">
+              <div className="mt-6 flex items-center justify-between border-t border-black/10 pt-4 text-xs text-[#4E5561]">
                 <span>{article.author}</span>
-                <span className="inline-flex items-center gap-1.5 text-[#e1c46b]">
+                <span className="inline-flex items-center gap-1.5 text-[#8C6D14]">
                   Read <ArrowUpRight size={13} aria-hidden="true" />
                 </span>
               </div>
@@ -116,20 +116,20 @@ export function IntelligenceLibrary({ articles }: { articles: IntelligenceArticl
           ))}
         </div>
       ) : (
-        <div className="glass-card p-8 md:p-10">
+        <div className="border border-black/12 bg-[#FAF8F4] p-8 md:p-12">
           <div className="flex items-start gap-5">
-            <BookOpen className="mt-1 shrink-0 text-[#c9a227]" size={24} aria-hidden="true" />
+            <BookOpen className="mt-1 shrink-0 text-[#8C6D14]" size={24} aria-hidden="true" />
             <div>
-              <div className="eyebrow">Editorial programme</div>
-              <h2 className="font-display mt-4 text-2xl font-light text-white">
+              <div className="eyebrow-ivory">Editorial programme</div>
+              <h2 className="font-display mt-4 text-2xl font-light text-[#0B0E13]">
                 {articles.length === 0 ? "No publications yet." : "No matching publications."}
               </h2>
-              <p className="mt-4 max-w-xl text-sm leading-8 text-white/50">
+              <p className="mt-4 max-w-xl text-sm leading-8 text-[#4E5561]">
                 {articles.length === 0
                   ? "New material will appear here after editorial and factual review. No articles or market opinions are attributed to individuals at this time."
                   : "Try clearing the search filter or selecting a different category."}
               </p>
-              <div className="mt-7 inline-flex items-center gap-2 text-xs tracking-widest text-[#d8b84f]">
+              <div className="mt-7 inline-flex items-center gap-2 font-mono text-[11px] tracking-[0.2em] text-[#8C6D14]">
                 EVIDENCE · CONTEXT · PERSPECTIVE <ArrowUpRight size={14} aria-hidden="true" />
               </div>
             </div>

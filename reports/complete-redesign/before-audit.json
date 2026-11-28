@@ -1,0 +1,132 @@
+{
+  "/": {
+    "status": 200,
+    "desktop": {
+      "overflow": false,
+      "scrollHeight": 8965,
+      "h1": "Beyond the Known.By Design.",
+      "brokenImages": 0
+    },
+    "mobile": {
+      "overflow": false,
+      "scrollHeight": 10804
+    }
+  },
+  "/about": {
+    "status": 200,
+    "desktop": {
+      "overflow": false,
+      "scrollHeight": 2936,
+      "h1": "An institution shaped by the pursuit of what comes next.",
+      "brokenImages": 0
+    },
+    "mobile": {
+      "overflow": false,
+      "scrollHeight": 4438
+    }
+  },
+  "/research": {
+    "status": 200,
+    "desktop": {
+      "overflow": false,
+      "scrollHeight": 3690,
+      "h1": "Investigating systems. Testing assumptions. Building understanding.",
+      "brokenImages": 0
+    },
+    "mobile": {
+      "overflow": false,
+      "scrollHeight": 5765
+    }
+  },
+  "/technology": {
+    "status": 200,
+    "desktop": {
+      "overflow": false,
+      "scrollHeight": 3295,
+      "h1": "Engineering the systems behind new possibilities.",
+      "brokenImages": 0
+    },
+    "mobile": {
+      "overflow": false,
+      "scrollHeight": 5155
+    }
+  },
+  "/intelligence": {
+    "status": 200,
+    "desktop": {
+      "overflow": false,
+      "scrollHeight": 1800,
+      "h1": "A space for ideas, analysis and considered perspectives.",
+      "brokenImages": 0
+    },
+    "mobile": {
+      "overflow": false,
+      "scrollHeight": 2700
+    }
+  },
+  "/ira-dev": {
+    "status": 200,
+    "desktop": {
+      "overflow": false,
+      "scrollHeight": 6109,
+      "h1": "Ira Dev.",
+      "brokenImages": 0
+    },
+    "mobile": {
+      "overflow": false,
+      "scrollHeight": 9964
+    }
+  },
+  "/contact": {
+    "status": 200,
+    "desktop": {
+      "overflow": false,
+      "scrollHeight": 2020,
+      "h1": "Start a conversation at the frontier.",
+      "brokenImages": 0
+    },
+    "mobile": {
+      "overflow": false,
+      "scrollHeight": 2988
+    }
+  },
+  "/privacy": {
+    "status": 200,
+    "desktop": {
+      "overflow": false,
+      "scrollHeight": 2534,
+      "h1": "Privacy policy",
+      "brokenImages": 0
+    },
+    "mobile": {
+      "overflow": false,
+      "scrollHeight": 3781
+    }
+  },
+  "/terms": {
+    "status": 200,
+    "desktop": {
+      "overflow": false,
+      "scrollHeight": 2174,
+      "h1": "Terms of use",
+      "brokenImages": 0
+    },
+    "mobile": {
+      "overflow": false,
+      "scrollHeight": 3037
+    }
+  },
+  "/disclosures": {
+    "status": 200,
+    "desktop": {
+      "overflow": false,
+      "scrollHeight": 2401,
+      "h1": "Risk and regulatory disclosures",
+      "brokenImages": 0
+    },
+    "mobile": {
+      "overflow": false,
+      "scrollHeight": 3494
+    }
+  }
+}

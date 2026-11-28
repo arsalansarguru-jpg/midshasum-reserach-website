@@ -19,14 +19,14 @@ export default function IntelligencePage() {
         title="A space for ideas, analysis and considered perspectives."
         body="The MidShaSum Research editorial platform is intended to share research notes, analytical perspectives and institutional observations as this body of work develops."
       />
-      <section className="section-space">
+      <section className="band-ivory section-space">
         <div className="container-shell grid gap-16 md:grid-cols-[.65fr_1.35fr]">
           <aside>
-            <div className="eyebrow">Library</div>
-            <h2 className="font-display mt-5 text-3xl font-light">
+            <div className="eyebrow-ivory">Library</div>
+            <h2 className="type-section mt-5 text-[#0B0E13]">
               A considered record, not a content feed.
             </h2>
-            <p className="mt-5 text-sm leading-7 text-white/45">
+            <p className="mt-5 text-sm leading-7 text-[#4E5561]">
               Future pieces may include research notes, institutional perspectives, analytical commentary, technical articles and publications.
             </p>
           </aside>

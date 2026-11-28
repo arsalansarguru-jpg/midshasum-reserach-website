@@ -70,29 +70,29 @@ export function MethodologySpatial() {
     <section
       id="section-methodology"
       data-spatial-section="methodology"
-      className="relative isolate overflow-hidden border-b border-white/10 bg-[#080808] py-24 md:py-32"
+      className="band-ivory relative isolate overflow-hidden border-b border-black/10 py-24 md:py-32"
     >
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 opacity-40"
+        className="pointer-events-none absolute inset-0 opacity-60"
         style={{
           backgroundImage:
-            "radial-gradient(circle at 72% 48%, rgba(201,162,39,0.08), transparent 45%), linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px)",
-          backgroundSize: "auto, 72px 72px, 72px 72px"
+            "linear-gradient(rgba(11,14,19,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(11,14,19,0.03) 1px, transparent 1px)",
+          backgroundSize: "72px 72px"
         }}
       />
 
       <div className="container-shell relative">
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-16">
           <div>
-            <p className="eyebrow">Proposed Research Methodology</p>
-            <h2 className="type-section mt-5 text-[#f7f7f5]">
-              Discipline before <span className="text-[#e1c46b]">conclusion.</span>
+            <p className="eyebrow-ivory">Proposed Research Methodology</p>
+            <h2 className="type-section mt-5 text-[#0B0E13]">
+              Discipline before <span className="text-[#8C6D14]">conclusion.</span>
             </h2>
-            <p className="type-body-sm mt-5 max-w-md text-white/55">
+            <p className="type-body-sm mt-5 max-w-md text-[#4E5561]">
               A proposed six-stage inquiry sequence: Research Question → Data → Method → Validation → Interpretation → Publication.
             </p>
-            <p className="mt-4 max-w-md border-l border-[#c9a227] pl-4 text-xs leading-6 text-white/45">
+            <p className="mt-4 max-w-md border-l-2 border-[#C9A227] pl-4 text-xs leading-6 text-[#4E5561]">
               Conceptual framework only: this sequence describes intended institutional standards, not completed studies or validated findings.
             </p>
 
@@ -105,23 +105,23 @@ export function MethodologySpatial() {
                   role="img"
                   aria-label="Six-stage institutional research methodology diagram"
                 >
-                  <circle cx="170" cy="170" r="134" fill="none" stroke="rgba(255,255,255,0.1)" strokeWidth="1" />
-                  <circle cx="170" cy="170" r="86" fill="none" stroke="rgba(201,162,39,0.28)" strokeWidth="1" strokeDasharray="4 6" />
-                  <line x1="170" y1="20" x2="170" y2="320" stroke="rgba(255,255,255,0.06)" strokeWidth="1" />
-                  <line x1="20" y1="170" x2="320" y2="170" stroke="rgba(255,255,255,0.06)" strokeWidth="1" />
+                  <circle cx="170" cy="170" r="134" fill="none" stroke="rgba(11,14,19,0.14)" strokeWidth="1" />
+                  <circle cx="170" cy="170" r="86" fill="none" stroke="rgba(140,109,20,0.4)" strokeWidth="1" strokeDasharray="4 6" />
+                  <line x1="170" y1="20" x2="170" y2="320" stroke="rgba(11,14,19,0.08)" strokeWidth="1" />
+                  <line x1="20" y1="170" x2="320" y2="170" stroke="rgba(11,14,19,0.08)" strokeWidth="1" />
 
                   {(() => {
                     const angle = (activeIndex / STAGES.length) * Math.PI * 2 - Math.PI / 2;
                     const x = 170 + Math.cos(angle) * 134;
                     const y = 170 + Math.sin(angle) * 134;
-                    return <line x1="170" y1="170" x2={x} y2={y} stroke="#c9a227" strokeWidth="1.5" />;
+                    return <line x1="170" y1="170" x2={x} y2={y} stroke="#8C6D14" strokeWidth="1.5" />;
                   })()}
 
                   <text
                     x="170"
                     y="162"
                     textAnchor="middle"
-                    className="fill-[#e1c46b] font-mono text-[10px] uppercase tracking-[0.24em]"
+                    className="fill-[#8C6D14] font-mono text-[10px] uppercase tracking-[0.24em]"
                   >
                     STAGE {active.step}
                   </text>
@@ -129,7 +129,7 @@ export function MethodologySpatial() {
                     x="170"
                     y="186"
                     textAnchor="middle"
-                    className="fill-white font-display text-[15px] font-light"
+                    className="fill-[#0B0E13] font-display text-[15px] font-normal"
                   >
                     {active.title}
                   </text>
@@ -149,8 +149,8 @@ export function MethodologySpatial() {
                       style={{ left: `${pctX}%`, top: `${pctY}%` }}
                       className={`absolute -translate-x-1/2 -translate-y-1/2 border px-2.5 py-1.5 font-mono text-[10px] tracking-[.14em] transition-all ${
                         isActive
-                          ? "border-[#c9a227] bg-[#c9a227] text-[#080808] font-bold scale-105"
-                          : "border-white/20 bg-[#101216] text-white/75 hover:border-[#c9a227]/60 hover:text-white"
+                          ? "border-[#0B0E13] bg-[#0B0E13] text-[#F2F0E9] font-medium scale-105"
+                          : "border-black/20 bg-[#F2F0E9] text-[#0B0E13]/75 hover:border-[#8C6D14] hover:text-[#0B0E13]"
                       }`}
                     >
                       {stage.step}
@@ -167,23 +167,23 @@ export function MethodologySpatial() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.28 }}
-              className="glass-card-gold p-7 sm:p-9"
+              className="border border-black/12 bg-[#FAF8F4] p-7 sm:p-9"
             >
-              <div className="flex items-center justify-between border-b border-white/10 pb-4">
-                <span className="font-mono text-[10px] uppercase tracking-[.24em] text-[#e1c46b]">
+              <div className="flex items-center justify-between border-b border-black/10 pb-4">
+                <span className="font-mono text-[10px] uppercase tracking-[.24em] text-[#8C6D14]">
                   Phase {active.step} / 06
                 </span>
-                <span className="font-mono text-[10px] uppercase tracking-[.18em] text-white/40">
+                <span className="font-mono text-[10px] uppercase tracking-[.18em] text-[#4E5561]">
                   {active.subtitle}
                 </span>
               </div>
-              <h3 className="font-display mt-6 text-3xl font-light text-white sm:text-4xl">
+              <h3 className="font-display mt-6 text-3xl font-light text-[#0B0E13] sm:text-4xl">
                 {active.title}
               </h3>
-              <p className="mt-4 text-sm leading-8 text-white/65 sm:text-base">
+              <p className="mt-4 text-sm leading-8 text-[#4E5561] sm:text-base">
                 {active.description}
               </p>
-              <p className="mt-6 border-l border-[#c9a227] pl-4 text-xs italic leading-6 text-white/50">
+              <p className="mt-6 border-l-2 border-[#C9A227] pl-4 text-xs italic leading-6 text-[#4E5561]">
                 {active.principle}
               </p>
             </motion.div>
@@ -196,16 +196,16 @@ export function MethodologySpatial() {
                     key={stage.step}
                     type="button"
                     onClick={() => setActiveIndex(index)}
-                    className={`px-3.5 py-3 text-left ${
+                    className={`border px-3.5 py-3 text-left transition-colors ${
                       isActive
-                        ? "glass-card-gold text-white"
-                        : "glass-card-interactive text-white/60 hover:text-white"
+                        ? "border-[#0B0E13] bg-[#0B0E13] text-[#F2F0E9]"
+                        : "border-black/12 bg-[#FAF8F4] text-[#0B0E13]/75 hover:border-black/30 hover:text-[#0B0E13]"
                     }`}
                   >
-                    <span className="block font-mono text-[9px] tracking-[.2em] text-[#c9a227]">
+                    <span className={`block font-mono text-[9px] tracking-[.2em] ${isActive ? "text-[#C9A227]" : "text-[#8C6D14]"}`}>
                       {stage.step}
                     </span>
-                    <span className="font-display mt-1 block text-sm font-light">
+                    <span className="font-display mt-1 block text-sm font-normal">
                       {stage.title}
                     </span>
                   </button>

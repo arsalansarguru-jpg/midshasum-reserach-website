@@ -7,7 +7,6 @@ import { SpatialExperienceCanvas } from "@/components/spatial/spatial-canvas";
 import { SpatialErrorBoundary, SpatialViewport } from "@/components/spatial/spatial-viewport";
 import { ResearchFrontiers } from "@/components/spatial/research-frontiers";
 import { MethodologySpatial } from "@/components/spatial/methodology-spatial";
-import { SpatialNavRail } from "@/components/spatial/spatial-nav-rail";
 import { intelligenceArticles } from "@/lib/intelligence";
 
 const spatialChapters = [
@@ -97,9 +96,7 @@ export function SpatialUniverse() {
   }, []);
 
   return (
-    <div className="relative bg-[#080808] text-[#f7f7f5]">
-      <SpatialNavRail />
-
+    <div className="relative bg-[#080A0D] text-[#F2F0E9]">
       {/* ─── 5-CHAPTER CONTINUOUS SPATIAL JOURNEY ─── */}
       <section
         ref={journey}
@@ -108,7 +105,7 @@ export function SpatialUniverse() {
         aria-label="MidShaSum Research five-chapter spatial journey"
         data-testid="spatial-universe"
       >
-        <div className="spatial-universe__sticky sticky top-16 z-0 -mb-[calc(100svh-64px)] h-[calc(100svh-64px)] min-h-[570px] overflow-hidden lg:top-0 lg:-mb-[100svh] lg:h-[100svh]">
+        <div className="spatial-universe__sticky sticky top-16 z-0 -mb-[calc(100svh-64px)] h-[calc(100svh-64px)] min-h-[570px] overflow-hidden lg:top-[72px] lg:-mb-[calc(100svh-72px)] lg:h-[calc(100svh-72px)]">
           <div className="spatial-universe__fallback absolute inset-0" aria-hidden="true" />
           {sceneVisible && !reducedMotion && (
             <SpatialErrorBoundary>
@@ -221,25 +218,67 @@ export function SpatialUniverse() {
         <div aria-hidden="true" className="spatial-universe__endcap h-[18svh]" />
       </section>
 
+      {/* ─── INSTITUTIONAL INTRODUCTION (WARM IVORY EDITORIAL SPREAD) ─── */}
+      <section
+        id="section-institution"
+        className="band-ivory border-y border-black/10 py-24 md:py-32"
+      >
+        <div className="container-shell grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
+          <div>
+            <p className="eyebrow-ivory">Independent Research Institution</p>
+            <h2 className="type-section mt-5 text-[#0B0E13]">
+              Built for enquiry, <span className="text-[#8C6D14]">not noise.</span>
+            </h2>
+          </div>
+          <div className="space-y-6">
+            <p className="type-body text-[#4E5561]">
+              MidShaSum Research is an independent research and technology institution dedicated to quantitative inquiry, financial technology, computational science, and intelligent systems.
+            </p>
+            <p className="type-body-sm text-[#4E5561]">
+              Rather than publishing speculative claims or chasing short-lived cycles, the institution is structured around verifiable evidence, deterministic engineering, and long-horizon inquiry.
+            </p>
+            <div className="grid gap-6 border-t border-black/10 pt-8 sm:grid-cols-3">
+              <div>
+                <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#8C6D14]">01 / Focus</p>
+                <p className="font-display mt-2 text-base font-normal text-[#0B0E13]">Quantitative &amp; Systems</p>
+              </div>
+              <div>
+                <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#8C6D14]">02 / Standard</p>
+                <p className="font-display mt-2 text-base font-normal text-[#0B0E13]">Method Before Conclusion</p>
+              </div>
+              <div>
+                <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#8C6D14]">03 / Governance</p>
+                <p className="font-display mt-2 text-base font-normal text-[#0B0E13]">Transparent Attribution</p>
+              </div>
+            </div>
+            <div className="pt-2">
+              <Link href="/about" className="btn-dark">
+                Read institutional philosophy <ArrowUpRight size={15} aria-hidden="true" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ─── RESEARCH FRONTIERS (OBSIDIANUI PARALLAX SLIDER) ─── */}
       <ResearchFrontiers />
 
       {/* ─── RESEARCH METHODOLOGY (SPATIAL PROCESS VISUALISATION) ─── */}
       <MethodologySpatial />
 
-      {/* ─── INSIGHTS AND PUBLICATIONS ─── */}
+      {/* ─── INSIGHTS AND PUBLICATIONS (DEEP NAVY) ─── */}
       <section
         id="section-insights"
         data-spatial-section="insights"
-        className="border-b border-white/10 bg-[#101216]/60 py-24 md:py-32"
+        className="band-navy border-b border-white/10 py-24 md:py-32"
       >
         <div className="container-shell grid gap-14 lg:grid-cols-[.8fr_1.2fr]">
           <div>
             <p className="eyebrow">Insights &amp; Publications</p>
-            <h2 className="font-display mt-5 text-3xl font-light leading-tight tracking-[-.045em] text-[#f7f7f5] sm:text-5xl">
+            <h2 className="type-section mt-5 text-[#F2F0E9]">
               A considered record, not a content feed.
             </h2>
-            <p className="mt-5 max-w-md text-sm leading-7 text-white/55">
+            <p className="mt-5 max-w-md text-sm leading-7 text-white/65">
               The MidShaSum Research Intelligence library is structured for research articles, institutional perspectives, technical insights and emerging technology analysis.
             </p>
             <Link href="/intelligence" className="btn-quiet mt-8">
@@ -247,7 +286,7 @@ export function SpatialUniverse() {
             </Link>
           </div>
 
-          <div className="glass-card p-8 md:p-10">
+          <div className="border border-white/12 bg-[#080A0D]/55 p-8 md:p-10">
             {intelligenceArticles.length > 0 ? (
               <div className="grid gap-5 sm:grid-cols-2">
                 {intelligenceArticles.map((article) => (
@@ -293,37 +332,37 @@ export function SpatialUniverse() {
       <section
         id="section-contact"
         data-spatial-section="contact"
-        className="spatial-hero relative isolate overflow-hidden bg-[#080808] py-24 md:py-32"
+        className="spatial-hero relative isolate overflow-hidden bg-[#080A0D] py-24 md:py-32"
       >
         <SpatialViewport variant="contact" />
         <div className="container-shell relative z-10">
           <div className="max-w-3xl">
             <p className="eyebrow">Institutional Enquiries</p>
-            <h2 className="font-display mt-6 text-4xl font-light leading-[1.1] tracking-[-.05em] text-white sm:text-6xl">
+            <h2 className="type-section mt-6 text-[#F2F0E9]">
               Beyond the Known.
               <br />
-              <span className="text-[#e1c46b]">By Design.</span>
+              <span className="text-[#E1C46B]">By Design.</span>
             </h2>
-            <p className="mt-6 max-w-xl text-sm leading-8 text-white/60 sm:text-base">
+            <p className="mt-6 max-w-xl text-sm leading-8 text-white/65 sm:text-base">
               MidShaSum Research welcomes considered enquiries relating to research collaboration, technology partnerships, licensing and institutional relationships.
             </p>
           </div>
 
-          <div className="glass-card-elevated mt-12 grid gap-0 md:grid-cols-3">
+          <div className="mt-12 grid gap-0 border border-white/12 bg-[#10141A]/75 md:grid-cols-3">
             <div className="border-b border-white/10 p-7 md:border-b-0">
-              <Mail className="text-[#c9a227]" size={20} aria-hidden="true" />
-              <h3 className="font-display mt-5 text-lg text-white">Institutional enquiries</h3>
-              <p className="mt-2 text-sm leading-7 text-white/50">General enquiries and institutional introductions.</p>
+              <Mail className="text-[#C9A227]" size={20} aria-hidden="true" />
+              <h3 className="font-display mt-5 text-lg font-normal text-[#F2F0E9]">Institutional enquiries</h3>
+              <p className="mt-2 text-sm leading-7 text-white/60">General enquiries and institutional introductions.</p>
             </div>
             <div className="border-b border-white/10 p-7 md:border-b-0 md:border-l md:border-white/10">
-              <Handshake className="text-[#c9a227]" size={20} aria-hidden="true" />
-              <h3 className="font-display mt-5 text-lg text-white">Partnerships</h3>
-              <p className="mt-2 text-sm leading-7 text-white/50">Technology, research and strategic collaborations.</p>
+              <Handshake className="text-[#C9A227]" size={20} aria-hidden="true" />
+              <h3 className="font-display mt-5 text-lg font-normal text-[#F2F0E9]">Partnerships</h3>
+              <p className="mt-2 text-sm leading-7 text-white/60">Technology, research and strategic collaborations.</p>
             </div>
             <div className="p-7 md:border-l md:border-white/10">
-              <Lightbulb className="text-[#c9a227]" size={20} aria-hidden="true" />
-              <h3 className="font-display mt-5 text-lg text-white">Licensing &amp; projects</h3>
-              <p className="mt-2 text-sm leading-7 text-white/50">Discuss potential technology licensing and project scope.</p>
+              <Lightbulb className="text-[#C9A227]" size={20} aria-hidden="true" />
+              <h3 className="font-display mt-5 text-lg font-normal text-[#F2F0E9]">Licensing &amp; projects</h3>
+              <p className="mt-2 text-sm leading-7 text-white/60">Discuss potential technology licensing and project scope.</p>
             </div>
           </div>
 

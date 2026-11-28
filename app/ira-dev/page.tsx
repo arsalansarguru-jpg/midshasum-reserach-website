@@ -139,35 +139,35 @@ export default function IraDevPage() {
         </div>
       </section>
 
-      <nav aria-label="Ira Dev profile sections" className="glass-panel border-x-0 border-b border-white/10">
-        <div className="container-shell flex gap-6 overflow-x-auto py-4 text-[10px] uppercase tracking-[.16em] text-white/50 sm:gap-9">
-          <Link className="whitespace-nowrap transition-colors hover:text-[#e1c46b]" href="#profile">Profile</Link>
-          <Link className="whitespace-nowrap transition-colors hover:text-[#e1c46b]" href="#representation">Representation</Link>
-          <Link className="whitespace-nowrap transition-colors hover:text-[#e1c46b]" href="#vision">Vision</Link>
-          <Link className="whitespace-nowrap transition-colors hover:text-[#e1c46b]" href="#interests">Areas of interest</Link>
-          <Link className="whitespace-nowrap transition-colors hover:text-[#e1c46b]" href="#statement">Statement</Link>
+      <nav aria-label="Ira Dev profile sections" className="border-y border-white/10 bg-[#0E1218]">
+        <div className="container-shell flex gap-6 overflow-x-auto py-4 font-mono text-[10px] uppercase tracking-[.16em] text-white/60 sm:gap-9">
+          <Link className="whitespace-nowrap transition-colors hover:text-[#E1C46B]" href="#profile">Profile</Link>
+          <Link className="whitespace-nowrap transition-colors hover:text-[#E1C46B]" href="#representation">Representation</Link>
+          <Link className="whitespace-nowrap transition-colors hover:text-[#E1C46B]" href="#vision">Vision</Link>
+          <Link className="whitespace-nowrap transition-colors hover:text-[#E1C46B]" href="#interests">Areas of interest</Link>
+          <Link className="whitespace-nowrap transition-colors hover:text-[#E1C46B]" href="#statement">Statement</Link>
         </div>
       </nav>
 
-      <section id="profile" className="section-space scroll-mt-24">
+      <section id="profile" className="band-ivory section-space scroll-mt-24 border-b border-black/10">
         <div className="container-shell grid gap-10 md:grid-cols-[.8fr_1.2fr] md:gap-20">
           <Reveal>
-            <p className="eyebrow">01 / Institutional profile</p>
-            <h2 className="font-display mt-6 max-w-xl text-3xl font-light leading-tight tracking-[-.045em] sm:text-4xl lg:text-5xl">
+            <p className="eyebrow-ivory">01 / Institutional profile</p>
+            <h2 className="type-section mt-6 max-w-xl text-[#0B0E13]">
               The Institutional Voice of MidShaSum Research
             </h2>
-            <p className="mt-6 max-w-md text-sm leading-7 text-white/50">
+            <p className="mt-6 max-w-md text-sm leading-7 text-[#4E5561]">
               Ira Dev gives consistent, considered expression to MidShaSum Research&apos;s institutional direction, research philosophy and strategic perspective.
             </p>
           </Reveal>
-          <div className="border-t border-white/15">
+          <div className="border-t border-black/15">
             {biography.map(({ title, paragraphs }, index) => (
-              <Reveal key={title} className="grid gap-3 border-b border-white/10 py-6 sm:grid-cols-[54px_1fr] sm:gap-6 sm:py-7">
-                <span className="font-display text-xs tracking-[.18em] text-[#d1ae49]">{String(index + 1).padStart(2, "0")}</span>
+              <Reveal key={title} className="grid gap-3 border-b border-black/12 py-6 sm:grid-cols-[54px_1fr] sm:gap-6 sm:py-7">
+                <span className="font-mono text-xs tracking-[.18em] text-[#8C6D14]">{String(index + 1).padStart(2, "0")}</span>
                 <div>
-                  <h3 className="font-display text-xl font-light tracking-[-.025em] text-white sm:text-2xl">{title}</h3>
+                  <h3 className="font-display text-xl font-normal tracking-[-.02em] text-[#0B0E13] sm:text-2xl">{title}</h3>
                   {paragraphs.map((paragraph) => (
-                    <p key={paragraph} className="mt-3 text-sm leading-7 text-white/50">{paragraph}</p>
+                    <p key={paragraph} className="mt-3 text-sm leading-7 text-[#4E5561]">{paragraph}</p>
                   ))}
                 </div>
               </Reveal>
@@ -176,117 +176,115 @@ export default function IraDevPage() {
         </div>
       </section>
 
-      <section id="representation" className="section-space scroll-mt-20 border-y border-white/10 bg-[#0c1015]">
+      <section id="representation" className="band-navy section-space scroll-mt-20 border-b border-white/10">
         <div className="container-shell grid gap-10 md:grid-cols-[.8fr_1.2fr] md:gap-20">
           <Reveal>
             <p className="eyebrow">02 / Role & responsibility</p>
-            <h2 className="font-display mt-6 max-w-lg text-3xl font-light leading-tight tracking-[-.045em] sm:text-4xl">
+            <h2 className="type-section mt-6 max-w-lg text-[#F2F0E9]">
               A Purposeful Representative Identity
             </h2>
           </Reveal>
-          <Reveal className="text-sm leading-8 text-white/55 sm:text-base">
+          <Reveal className="text-sm leading-8 text-white/70 sm:text-base">
             <p>
               MidShaSum Research uses Ira Dev as its institutional brand identity — a consistent spokesperson who articulates the institution&apos;s research orientation, long-term direction and intellectual philosophy across its public communications.
             </p>
             <p className="mt-5">
               Her perspective centres on evidence, clarity, intellectual independence and questioning established assumptions. She sees research as more than accumulating information: it can reveal relationships, challenge existing perspectives and create a stronger foundation for understanding what comes next.
             </p>
-            <p className="mt-5 border-l border-[#c9a227] pl-5 text-white/40">
+            <p className="mt-5 border-l-2 border-[#C9A227] pl-5 text-white/60">
               Ira Dev is an AI-generated representative. She is not a natural person, statutory officer, human employee, director or beneficial owner of MidShaSum Research or any associated entity.
             </p>
           </Reveal>
         </div>
       </section>
 
-      <section id="vision" className="ira-vision relative isolate scroll-mt-20 overflow-hidden border-y border-[#c9a227]/20 bg-[#0c1118] py-24 sm:py-32">
-        <div aria-hidden="true" className="ira-vision-grid absolute inset-0 -z-10" />
+      <section id="vision" className="band-obsidian relative isolate scroll-mt-20 overflow-hidden border-b border-white/10 py-24 sm:py-32">
         <Reveal className="container-shell relative">
           <p className="eyebrow">03 / Vision & philosophy</p>
           <div className="mt-9 grid gap-10 lg:grid-cols-[1.1fr_.9fr] lg:items-end lg:gap-20">
-            <h2 className="font-display max-w-3xl text-4xl font-light leading-[1.12] tracking-[-.06em] sm:text-5xl lg:text-6xl">
+            <h2 className="type-section max-w-3xl text-[#F2F0E9]">
               Beyond the Known.
               <br />
-              <span className="text-[#d1ae49]">By Design.</span>
+              <span className="text-[#E1C46B]">By Design.</span>
             </h2>
             <div className="max-w-xl">
-              <p className="text-sm leading-8 text-white/65 sm:text-base">
+              <p className="text-sm leading-8 text-white/75 sm:text-base">
                 The long-term ambition expressed through Ira Dev&apos;s voice is to build MidShaSum Research into an internationally respected independent research institution, recognised for its intellectual standards, research orientation, technological perspective and commitment to exploring important questions.
               </p>
-              <p className="mt-5 text-sm leading-8 text-white/45">
+              <p className="mt-5 text-sm leading-8 text-white/60">
                 The ambition is not simply to follow established developments, but to develop the capacity to investigate emerging ones. Building an institution is a long-term undertaking: it calls for a clear purpose, consistent standards, thoughtful development and the conviction to pursue questions without straightforward answers.
               </p>
-              <p className="mt-5 text-sm leading-8 text-white/45">
+              <p className="mt-5 text-sm leading-8 text-white/60">
                 &ldquo;Beyond the Known. By Design.&rdquo; is more than a motto; it expresses the institutional philosophy that guides MidShaSum Research&apos;s direction.
               </p>
             </div>
           </div>
           <div className="mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {visionPriorities.map(([title, detail], index) => (
-              <div key={title} className="glass-card p-6">
-                <p className="font-display text-[10px] tracking-[.15em] text-[#d1ae49]">{String(index + 1).padStart(2, "0")}</p>
-                <h3 className="font-display mt-3 text-lg font-light text-white">{title}</h3>
-                <p className="mt-2 text-xs leading-6 text-white/55">{detail}</p>
+              <div key={title} className="border border-white/12 bg-[#10141A]/75 p-6">
+                <p className="font-mono text-[10px] tracking-[.18em] text-[#C9A227]">{String(index + 1).padStart(2, "0")}</p>
+                <h3 className="font-display mt-3 text-lg font-normal text-[#F2F0E9]">{title}</h3>
+                <p className="mt-2 text-xs leading-6 text-white/60">{detail}</p>
               </div>
             ))}
           </div>
-          <div aria-hidden="true" className="ira-vision-coordinate mt-14 flex items-center justify-between border-t border-white/10 pt-4 text-[9px] uppercase tracking-[.2em] text-white/35">
+          <div aria-hidden="true" className="mt-14 flex items-center justify-between border-t border-white/10 pt-4 font-mono text-[9px] uppercase tracking-[.2em] text-white/35">
             <span>MidShaSum Research</span>
             <span>Beyond the Known. By Design.</span>
           </div>
         </Reveal>
       </section>
 
-      <section id="interests" className="section-space scroll-mt-20">
+      <section id="interests" className="band-ivory section-space scroll-mt-20 border-b border-black/10">
         <div className="container-shell grid gap-12 lg:grid-cols-[.8fr_1.2fr] lg:gap-20">
           <Reveal>
-            <p className="eyebrow">04 / Research & technology</p>
-            <h2 className="font-display mt-6 max-w-lg text-3xl font-light leading-tight tracking-[-.045em] sm:text-4xl lg:text-5xl">
+            <p className="eyebrow-ivory">04 / Research & technology</p>
+            <h2 className="type-section mt-6 max-w-lg text-[#0B0E13]">
               Areas of Interest and Institutional Focus
             </h2>
-            <p className="mt-6 max-w-md text-sm leading-7 text-white/50">
+            <p className="mt-6 max-w-md text-sm leading-7 text-[#4E5561]">
               The intellectual interests expressed through Ira Dev span connected fields shaping economies, industries and societies. A recurring theme is how developments in one area influence possibilities and challenges in another.
             </p>
           </Reveal>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             {areasOfInterest.map((area, index) => (
-              <Reveal key={area} className="glass-card-interactive group flex min-h-20 items-center gap-4 p-5">
-                <span aria-hidden="true" className="font-display text-[10px] tracking-[.14em] text-[#d1ae49]/75">
+              <Reveal key={area} className="flex min-h-20 items-center gap-4 border border-black/12 bg-[#FAF8F4] p-5">
+                <span aria-hidden="true" className="font-mono text-[10px] tracking-[.14em] text-[#8C6D14]">
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <h3 className="text-sm leading-6 text-white/80 transition-colors group-hover:text-white">{area}</h3>
-                <ArrowUpRight aria-hidden="true" size={14} className="ml-auto shrink-0 text-white/25 transition-colors group-hover:text-[#d1ae49]" />
+                <h3 className="text-sm leading-6 text-[#0B0E13]">{area}</h3>
               </Reveal>
             ))}
-            <p className="pt-2 text-xs leading-6 text-white/45 sm:col-span-2">
+            <p className="pt-2 text-xs leading-6 text-[#4E5561] sm:col-span-2">
               These interests reflect the institutional direction of MidShaSum Research and are expressed through Ira Dev in her representative capacity.
             </p>
           </div>
         </div>
       </section>
 
-      <section id="statement" className="scroll-mt-20 border-y border-white/10 bg-[#0c1015] py-20 sm:py-28">
+      <section id="statement" className="band-navy scroll-mt-20 border-b border-white/10 py-20 sm:py-28">
         <Reveal className="container-shell max-w-4xl text-center">
           <p className="eyebrow">05 / Institutional commitment &amp; transparency</p>
-          <h2 className="font-display mt-8 text-3xl font-light leading-tight tracking-[-.04em] text-white sm:text-4xl lg:text-5xl">
+          <h2 className="font-display mt-8 text-3xl font-light leading-tight tracking-[-.04em] text-[#F2F0E9] sm:text-4xl lg:text-5xl">
             Important questions deserve disciplined inquiry, transparent methods and accountable stewardship.
           </h2>
-          <p className="mt-8 text-xs font-semibold uppercase tracking-[.18em] text-[#e1c46b]">
+          <p className="mt-8 font-mono text-xs uppercase tracking-[.18em] text-[#E1C46B]">
             MidShaSum Research · Institutional Direction
           </p>
-          <p className="mx-auto mt-4 max-w-2xl text-xs leading-6 text-white/45">
+          <p className="mx-auto mt-4 max-w-2xl text-xs leading-6 text-white/60">
             Ira Dev is MidShaSum Research&apos;s fictional, AI-generated virtual executive and brand spokesperson. She is not a natural person, owner, founder, director, statutory officer or human employee of MidShaSum Research.
           </p>
         </Reveal>
       </section>
 
-      <section className="section-space">
+      <section className="band-obsidian section-space">
         <div className="container-shell">
           <Reveal className="max-w-3xl">
             <p className="eyebrow">MidShaSum Research</p>
-            <h2 className="font-display mt-6 text-3xl font-light leading-tight tracking-[-.045em] sm:text-4xl lg:text-5xl">
+            <h2 className="type-section mt-6 text-[#F2F0E9]">
               A wider mission, expressed through independent leadership.
             </h2>
-            <p className="mt-6 max-w-2xl text-sm leading-8 text-white/50">
+            <p className="mt-6 max-w-2xl text-sm leading-8 text-white/60">
               MidShaSum Research pursues a considered exploration of quantitative research, financial technology and intelligent systems. Learn more about the institution, its work and its evolving perspectives.
             </p>
           </Reveal>
@@ -295,14 +293,14 @@ export default function IraDevPage() {
               <Link
                 key={href}
                 href={href}
-                className="glass-card-interactive group p-5"
+                className="group border border-white/12 bg-[#10141A]/75 p-5 transition-colors hover:border-[#C9A227]/50"
               >
-                <span className="font-display text-[10px] tracking-[.15em] text-[#d1ae49]">{String(index + 1).padStart(2, "0")}</span>
-                <span className="mt-3 flex items-center justify-between font-display text-lg font-light text-white/85">
+                <span className="font-mono text-[10px] tracking-[.15em] text-[#C9A227]">{String(index + 1).padStart(2, "0")}</span>
+                <span className="mt-3 flex items-center justify-between font-display text-lg font-normal text-[#F2F0E9]">
                   {label}
-                  <ArrowUpRight aria-hidden="true" size={14} className="text-white/35 transition-colors group-hover:text-[#d1ae49]" />
+                  <ArrowUpRight aria-hidden="true" size={14} className="text-white/40 transition-colors group-hover:text-[#E1C46B]" />
                 </span>
-                <span className="mt-2 block text-xs leading-5 text-white/40">{detail}</span>
+                <span className="mt-2 block text-xs leading-5 text-white/55">{detail}</span>
               </Link>
             ))}
           </div>

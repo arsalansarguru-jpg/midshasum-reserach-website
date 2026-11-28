@@ -72,10 +72,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body>
         <a className="skip-link" href="#main-content">Skip to content</a>
         <SiteHeader />
-        <div className="lg:pl-[224px] 2xl:pl-[240px]">
-          <main id="main-content">{children}</main>
-          <SiteFooter />
-        </div>
+        <main id="main-content">{children}</main>
+        <SiteFooter />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
